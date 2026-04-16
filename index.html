@@ -3,10 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Removals and secure storage on the Costa Blanca. Local, Spain-UK, and UK-Spain moves, packing, crane services, and insured storage.">
-    <title>Mr Move | Removals & Secure Storage | Costa Blanca</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- PRIMARY SEO -->
+    <title>Mr Move | Removals & Secure Storage Costa Blanca | Torrevieja, Alicante</title>
+    <meta name="description" content="Fully licensed removal company on the Costa Blanca. Local moves, Spain–UK and UK–Spain relocations, secure insured storage, packing and crane services. Serving Torrevieja, Alicante, Orihuela Costa and beyond.">
+    <meta name="keywords" content="removals Costa Blanca, man and van Torrevieja, Spain UK removals, removal company Alicante, secure storage Costa Blanca, crane removal service, Orihuela Costa removals, Mr Move">
+    <link rel="canonical" href="https://mrmove.es/">
+
+    <!-- OPEN GRAPH -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mrmove.es/">
+    <meta property="og:title" content="Mr Move | Removals & Secure Storage Costa Blanca">
+    <meta property="og:description" content="Fully licensed removal company on the Costa Blanca. Local moves, Spain–UK relocations, secure insured storage and crane services. 15+ years experience.">
+    <meta property="og:image" content="https://i.imghippo.com/files/AVm6314yyY.jpg">
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:site_name" content="Mr Move Costa Blanca">
+
+    <!-- TWITTER CARD -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mr Move | Removals & Secure Storage Costa Blanca">
+    <meta name="twitter:description" content="Fully licensed removal company on the Costa Blanca. Local moves, Spain–UK relocations, secure insured storage and crane services.">
+    <meta name="twitter:image" content="https://i.imghippo.com/files/AVm6314yyY.jpg">
+
+    <!-- PERFORMANCE: PRECONNECTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- LOCAL BUSINESS SCHEMA -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MovingCompany",
+      "name": "Mr Move",
+      "url": "https://mrmove.es",
+      "logo": "https://i.imghippo.com/files/rCjU7017bI.png",
+      "image": "https://i.imghippo.com/files/AVm6314yyY.jpg",
+      "description": "Fully licensed and insured removal company on the Costa Blanca, Spain. Specialising in local removals, Spain–UK relocations, secure storage, packing and crane-assisted access.",
+      "telephone": "+34635647716",
+      "email": "info@mrmove.es",
+      "address": {
+        "@type": "PostalAddress",
+        "addressRegion": "Alicante",
+        "addressCountry": "ES"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "37.9792",
+        "longitude": "-0.6863"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+          "opens": "08:00",
+          "closes": "18:00"
+        }
+      ],
+      "areaServed": [
+        "Torrevieja","Alicante","Benidorm","Orihuela Costa","Guardamar del Segura","Santa Pola","Elche","Calpe","Costa Blanca"
+      ],
+      "priceRange": "££",
+      "hasMap": "https://maps.google.com/?q=Costa+Blanca+Spain",
+      "sameAs": [
+        "https://wa.me/34635647716"
+      ]
+    }
+    </script>
+
+    <!-- FAQ SCHEMA -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do you cover moves between Spain and the UK?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We handle both Spain-to-UK and UK-to-Spain relocations, including transport planning and customs documentation support where required."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are you fully insured for removals on the Costa Blanca?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Mr Move has goods-in-transit insurance and is a fully licensed removal company operating legally in Spain."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you move large items to upper-floor apartments without lift access?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We offer crane-assisted lifting for upper floors, roof terraces, jacuzzis and any item that staircases simply were not built to accommodate."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does your storage service work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We collect your items, store them securely in our insured facility, and redeliver when you're ready. Both short-term and long-term options are available."
+          }
+        }
+      ]
+    }
+    </script>
+
     <style>
         :root {
             --bg: #0a0a0c;
@@ -88,6 +197,60 @@
         .border-gold { border-color: rgba(212,175,55,0.35); }
         .bg-panel { background: var(--panel); }
         .bg-panel-2 { background: var(--panel-2); }
+
+        /* FAQ ACCORDION */
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), padding 0.35s ease;
+        }
+
+        .faq-answer.open {
+            max-height: 300px;
+        }
+
+        .faq-btn svg {
+            transition: transform 0.3s ease;
+        }
+
+        .faq-btn.open svg {
+            transform: rotate(45deg);
+        }
+
+        /* TESTIMONIAL STARS */
+        .stars::before {
+            content: '★★★★★';
+            color: var(--gold);
+            letter-spacing: 2px;
+        }
+
+        /* WhatsApp FAB tooltip */
+        .fab-tooltip {
+            opacity: 0;
+            transform: translateX(10px);
+            transition: all 0.3s ease;
+            pointer-events: none;
+        }
+
+        .fab-wrapper:hover .fab-tooltip {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* Pulse ring on FAB */
+        .fab-pulse::after {
+            content: '';
+            position: absolute;
+            inset: -4px;
+            border-radius: 18px;
+            border: 2px solid #25d366;
+            animation: pulse-ring 2s ease-out infinite;
+        }
+
+        @keyframes pulse-ring {
+            0% { opacity: 0.7; transform: scale(1); }
+            100% { opacity: 0; transform: scale(1.4); }
+        }
     </style>
 </head>
 <body class="min-h-screen">
@@ -97,23 +260,25 @@
         <div class="max-w-7xl mx-auto px-4 md:px-8 h-full">
             <div class="flex items-center justify-between h-full">
                 <a href="#top" class="flex items-center gap-3 group">
-                    <img src="https://i.imghippo.com/files/rCjU7017bI.png" alt="Mr Move Logo" class="h-10 w-auto object-contain group-hover:scale-105 transition-transform">
+                    <img src="https://i.imghippo.com/files/rCjU7017bI.png" alt="Mr Move removal company logo" class="h-10 w-auto object-contain group-hover:scale-105 transition-transform">
                     <div>
                         <div class="font-extrabold text-lg leading-none tracking-tight text-white">MR MOVE</div>
                         <div class="text-[10px] uppercase tracking-[0.2em] text-gold font-bold mt-1">Removals & Storage</div>
                     </div>
                 </a>
 
-                <nav class="hidden lg:flex items-center gap-8 text-sm font-semibold text-white/80">
+                <nav class="hidden lg:flex items-center gap-8 text-sm font-semibold text-white/80" aria-label="Main navigation">
                     <a href="#services" class="hover:text-gold transition-colors">Services</a>
                     <a href="#storage" class="hover:text-gold transition-colors">Storage</a>
                     <a href="#areas" class="hover:text-gold transition-colors">Areas</a>
                     <a href="#process" class="hover:text-gold transition-colors">How it works</a>
+                    <a href="#reviews" class="hover:text-gold transition-colors">Reviews</a>
+                    <a href="#faq" class="hover:text-gold transition-colors">FAQ</a>
                     <a href="#quote" class="hover:text-gold transition-colors">Quote</a>
                 </nav>
 
                 <div class="flex items-center gap-4">
-                    <a href="tel:+34635647716" class="hidden md:flex items-center gap-2 text-sm font-bold text-white hover:text-gold transition-colors">
+                    <a href="tel:+34635647716" class="hidden md:flex items-center gap-2 text-sm font-bold text-white hover:text-gold transition-colors" aria-label="Call Mr Move">
                         <svg class="w-4 h-4 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
                         635 64 77 16
                     </a>
@@ -129,7 +294,7 @@
     </header>
 
     <!-- MOBILE NAV DRAWER -->
-    <div id="mobileNav" class="fixed inset-0 z-[60] bg-[#0d0d10] translate-x-full transition-transform duration-300 lg:hidden">
+    <div id="mobileNav" class="fixed inset-0 z-[60] bg-[#0d0d10] translate-x-full transition-transform duration-300 lg:hidden" role="dialog" aria-modal="true" aria-label="Mobile navigation">
         <div class="flex flex-col h-full p-8">
             <div class="flex justify-between items-center mb-12">
                 <span class="font-bold text-xl">Navigation</span>
@@ -137,11 +302,13 @@
                     <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
                 </button>
             </div>
-            <nav class="flex flex-col gap-6 text-2xl font-bold">
+            <nav class="flex flex-col gap-6 text-2xl font-bold" aria-label="Mobile navigation">
                 <a href="#services" class="mobile-link">Services</a>
                 <a href="#storage" class="mobile-link">Storage</a>
                 <a href="#areas" class="mobile-link">Service Areas</a>
                 <a href="#process" class="mobile-link">How it works</a>
+                <a href="#reviews" class="mobile-link">Reviews</a>
+                <a href="#faq" class="mobile-link">FAQ</a>
                 <a href="#quote" class="mobile-link text-gold">Get a Quote</a>
             </nav>
             <div class="mt-auto pt-8 border-t border-white/10">
@@ -159,7 +326,7 @@
                 <div class="space-y-8 relative z-10">
                     <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-[#17171c] border border-gold text-xs md:text-sm font-bold text-white">
                         <span class="flex h-2.5 w-2.5 rounded-full bg-gold animate-pulse"></span>
-                        Fully Licensed & Insured Removals
+                        Fully Licensed & Insured — Costa Blanca
                     </div>
                     
                     <h1 class="text-4xl md:text-6xl font-extrabold leading-[1.06] tracking-tight text-white">
@@ -168,7 +335,7 @@
                     </h1>
                     
                     <p class="text-lg md:text-xl text-white/82 max-w-xl leading-relaxed font-medium">
-                        From local man-and-van jobs to full Spain-UK relocations, secure insured storage and crane-assisted access, Mr Move handles the awkward parts so your move feels less like a punishment.
+                        From local man-and-van jobs in Torrevieja and Alicante to full Spain–UK relocations, secure insured storage and crane-assisted access — Mr Move handles the awkward parts so your move feels less like a punishment.
                     </p>
 
                     <div class="flex flex-wrap gap-4">
@@ -176,7 +343,7 @@
                             Start Your Move
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                         </a>
-                        <a href="https://wa.me/34635647716" class="btn-secondary px-8 py-4 rounded-2xl font-bold text-lg flex items-center gap-3 text-white">
+                        <a href="https://wa.me/34635647716" class="btn-secondary px-8 py-4 rounded-2xl font-bold text-lg flex items-center gap-3 text-white" aria-label="Contact Mr Move on WhatsApp">
                             <svg class="w-6 h-6 text-[#25d366]" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
                             WhatsApp
                         </a>
@@ -188,7 +355,7 @@
                             <p class="text-[10px] uppercase tracking-widest text-white/60 font-bold">Years Exp</p>
                         </div>
                         <div class="space-y-1">
-                            <p class="text-2xl font-black text-white">€300k</p>
+                            <p class="text-2xl font-black text-white">Goods in Transit</p>
                             <p class="text-[10px] uppercase tracking-widest text-white/60 font-bold">Insured Cover</p>
                         </div>
                         <div class="space-y-1">
@@ -205,7 +372,7 @@
                 <div class="relative group hidden lg:block">
                     <div class="absolute -inset-5 rounded-[2.8rem] bg-gradient-to-br from-[#d4af37]/12 via-transparent to-[#d91624]/10 blur-2xl"></div>
                     <div class="relative bg-panel rounded-[2.5rem] overflow-hidden border border-white/10 aspect-[4/5] shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
-                        <img src="https://i.imghippo.com/files/AVm6314yyY.jpg" alt="Mr Move Fleet" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <img src="https://i.imghippo.com/files/AVm6314yyY.jpg" alt="Mr Move removal vans and fleet on the Costa Blanca" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" fetchpriority="high">
                     </div>
                 </div>
             </div>
@@ -216,44 +383,86 @@
     <section id="services" class="py-24 bg-[#0a0a0c]">
         <div class="max-w-7xl mx-auto px-4 md:px-8">
             <div class="mb-16 max-w-3xl">
-                <h2 class="text-3xl md:text-5xl font-extrabold mb-6 text-white">Services built around real moves</h2>
-                <p class="text-white/78 text-lg font-medium leading-relaxed">Moves rarely come in neat little boxes. Some need storage, some need planning, some need a crane because balconies and narrow staircases enjoy making life difficult.</p>
+                <h2 class="text-3xl md:text-5xl font-extrabold mb-6 text-white">Removal services built around real moves</h2>
+                <p class="text-white/78 text-lg font-medium leading-relaxed">Moves on the Costa Blanca rarely come in neat little boxes. Some need storage, some need planning, some need a crane because balconies and narrow staircases enjoy making life difficult. Here's what we cover.</p>
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Local Removals -->
                 <div class="card-dark p-8 rounded-[2rem]">
                     <div class="w-14 h-14 bg-[#c1121f]/20 rounded-2xl flex items-center justify-center text-[#ff3b48] mb-6 border border-[#c1121f]/30">
                         <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"/></svg>
                     </div>
                     <h3 class="text-xl font-extrabold mb-3 text-white">Local Removals</h3>
-                    <p class="text-white/80 text-sm leading-relaxed mb-6 font-medium">For homes, apartments and smaller jobs across the Costa Blanca, handled by a crew that actually knows the area.</p>
+                    <p class="text-white/80 text-sm leading-relaxed mb-6 font-medium">Man-and-van and full-crew removals for homes and apartments across Torrevieja, Orihuela Costa, Guardamar, Santa Pola and the wider Costa Blanca — handled by a team that actually knows the area.</p>
                     <ul class="space-y-2 text-[10px] font-bold text-gold uppercase tracking-widest">
                         <li class="flex items-center gap-2">✓ Flexible scheduling</li>
                         <li class="flex items-center gap-2">✓ Insured handling</li>
                     </ul>
                 </div>
 
+                <!-- UK & European -->
                 <div class="card-dark p-8 rounded-[2rem]">
                     <div class="w-14 h-14 bg-[#d4af37]/20 rounded-2xl flex items-center justify-center text-[#d4af37] mb-6 border border-[#d4af37]/30">
                         <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                     </div>
-                    <h3 class="text-xl font-extrabold mb-3 text-white">UK & European Moves</h3>
-                    <p class="text-white/80 text-sm leading-relaxed mb-6 font-medium">Straightforward support for Spain-UK and European relocations, with transport planning and experienced handling throughout.</p>
+                    <h3 class="text-xl font-extrabold mb-3 text-white">Spain–UK & European Moves</h3>
+                    <p class="text-white/80 text-sm leading-relaxed mb-6 font-medium">Straightforward support for Spain-to-UK and UK-to-Spain relocations, with full transport planning and experienced handling from door to door across the whole route.</p>
                     <ul class="space-y-2 text-[10px] font-bold text-gold uppercase tracking-widest">
                         <li class="flex items-center gap-2">✓ Long-distance transport</li>
-                        <li class="flex items-center gap-2">✓ Practical support</li>
+                        <li class="flex items-center gap-2">✓ Practical support throughout</li>
                     </ul>
                 </div>
 
+                <!-- Crane -->
                 <div class="card-dark p-8 rounded-[2rem]">
                     <div class="w-14 h-14 bg-blue-500/20 rounded-2xl flex items-center justify-center text-blue-400 mb-6 border border-blue-500/30">
                         <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
                     </div>
                     <h3 class="text-xl font-extrabold mb-3 text-white">Crane & Specialist Access</h3>
-                    <p class="text-white/80 text-sm leading-relaxed mb-6 font-medium">Ideal for awkward deliveries, upper floors, rooftop furniture, jacuzzis and items that clearly were not designed with staircases in mind.</p>
+                    <p class="text-white/80 text-sm leading-relaxed mb-6 font-medium">For upper-floor apartments, roof terraces, jacuzzis, pool tables and items that clearly were not designed with a four-floor walk-up in mind. External lifting where stairs simply aren't an option.</p>
                     <ul class="space-y-2 text-[10px] font-bold text-gold uppercase tracking-widest">
                         <li class="flex items-center gap-2">✓ External lifting solutions</li>
                         <li class="flex items-center gap-2">✓ Heavy item handling</li>
+                    </ul>
+                </div>
+
+                <!-- Packing -->
+                <div class="card-dark p-8 rounded-[2rem]">
+                    <div class="w-14 h-14 bg-purple-500/20 rounded-2xl flex items-center justify-center text-purple-400 mb-6 border border-purple-500/30">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"/></svg>
+                    </div>
+                    <h3 class="text-xl font-extrabold mb-3 text-white">Packing Service</h3>
+                    <p class="text-white/80 text-sm leading-relaxed mb-6 font-medium">Full or partial packing by the team, using proper materials. Takes the worst part of any move off your plate, and means things arrive in the same condition they left.</p>
+                    <ul class="space-y-2 text-[10px] font-bold text-gold uppercase tracking-widest">
+                        <li class="flex items-center gap-2">✓ Professional packing materials</li>
+                        <li class="flex items-center gap-2">✓ Fragile & specialist items</li>
+                    </ul>
+                </div>
+
+                <!-- Storage -->
+                <div class="card-dark p-8 rounded-[2rem]">
+                    <div class="w-14 h-14 bg-green-500/20 rounded-2xl flex items-center justify-center text-green-400 mb-6 border border-green-500/30">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z"/></svg>
+                    </div>
+                    <h3 class="text-xl font-extrabold mb-3 text-white">Secure Storage</h3>
+                    <p class="text-white/80 text-sm leading-relaxed mb-6 font-medium">Insured, monitored storage for when completion dates slip, renovations overrun or you simply need breathing room between properties. Short or long term.</p>
+                    <ul class="space-y-2 text-[10px] font-bold text-gold uppercase tracking-widest">
+                        <li class="flex items-center gap-2">✓ Goods-in-transit insured cover</li>
+                        <li class="flex items-center gap-2">✓ Collection & redelivery</li>
+                    </ul>
+                </div>
+
+                <!-- House Clearance -->
+                <div class="card-dark p-8 rounded-[2rem]">
+                    <div class="w-14 h-14 bg-orange-500/20 rounded-2xl flex items-center justify-center text-orange-400 mb-6 border border-orange-500/30">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+                    </div>
+                    <h3 class="text-xl font-extrabold mb-3 text-white">House Clearance</h3>
+                    <p class="text-white/80 text-sm leading-relaxed mb-6 font-medium">Full property clearances handled cleanly and efficiently — useful for estate situations, rental turnovers and properties being sold or returned.</p>
+                    <ul class="space-y-2 text-[10px] font-bold text-gold uppercase tracking-widest">
+                        <li class="flex items-center gap-2">✓ Full or partial clearance</li>
+                        <li class="flex items-center gap-2">✓ Responsible disposal</li>
                     </ul>
                 </div>
             </div>
@@ -266,7 +475,7 @@
             <div class="grid lg:grid-cols-2 gap-12 items-center">
                 <div class="order-2 lg:order-1">
                     <div class="relative rounded-[2.5rem] overflow-hidden border border-white/20 shadow-2xl group">
-                        <img src="https://i.imghippo.com/files/dtpj1071ugc.jpg" alt="Secure Storage Facility" class="w-full aspect-video lg:aspect-square object-cover group-hover:scale-105 transition-transform duration-700">
+                        <img src="https://i.imghippo.com/files/dtpj1071ugc.jpg" alt="Secure insured storage facility Costa Blanca" class="w-full aspect-video lg:aspect-square object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy">
                         <div class="absolute top-6 left-6 flex flex-col gap-2">
                             <span class="bg-[#16161a] px-4 py-2 rounded-full text-xs font-bold border border-green-500/50 text-green-400 flex items-center gap-2">
                                 <span class="w-2 h-2 rounded-full bg-green-500"></span>
@@ -280,14 +489,14 @@
                 </div>
                 <div class="order-1 lg:order-2 space-y-8">
                     <h2 class="text-4xl md:text-5xl font-extrabold leading-tight text-white">Secure, insured storage that works around your move</h2>
-                    <p class="text-lg text-white/84 font-medium leading-relaxed">Useful when completion dates slip, renovations drag on, or you simply need breathing room between properties. Storage should remove stress, not add another layer of it.</p>
+                    <p class="text-lg text-white/84 font-medium leading-relaxed">Useful when completion dates slip, renovations drag on, or you simply need breathing room between properties. Our Costa Blanca storage facility is monitored and covered under our full insurance policy — storage should remove stress, not add another layer of it.</p>
                     
                     <div class="space-y-5">
                         <div class="flex items-start gap-4 p-4 rounded-2xl bg-white/5 border border-white/10">
                             <div class="w-7 h-7 rounded-full bg-[#d4af37] flex-shrink-0 flex items-center justify-center text-black font-black">✓</div>
                             <div>
                                 <h4 class="font-bold text-white">Collection & Redelivery</h4>
-                                <p class="text-sm text-white/70 font-medium">We collect it, store it securely, and bring it back when you're ready.</p>
+                                <p class="text-sm text-white/70 font-medium">We collect your items from anywhere on the Costa Blanca, store them securely, and bring them back when you're ready.</p>
                             </div>
                         </div>
                         <div class="flex items-start gap-4 p-4 rounded-2xl bg-white/5 border border-white/10">
@@ -295,6 +504,13 @@
                             <div>
                                 <h4 class="font-bold text-white">Flexible Terms</h4>
                                 <p class="text-sm text-white/70 font-medium">Short-term or long-term, depending on whether your plans are tidy or doing what plans usually do.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4 p-4 rounded-2xl bg-white/5 border border-white/10">
+                            <div class="w-7 h-7 rounded-full bg-[#d4af37] flex-shrink-0 flex items-center justify-center text-black font-black">✓</div>
+                            <div>
+                                <h4 class="font-bold text-white">Part of Your Move</h4>
+                                <p class="text-sm text-white/70 font-medium">Storage can be booked as a standalone service or as part of a full removal package — no need to coordinate separate companies.</p>
                             </div>
                         </div>
                     </div>
@@ -309,21 +525,21 @@
     </section>
 
     <!-- GALLERY SECTION -->
-    <section class="py-20 bg-[#050507]">
+    <section class="py-20 bg-[#050507]" aria-label="Fleet gallery">
         <div class="max-w-7xl mx-auto px-4 md:px-8">
             <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
                 <div>
                     <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-4">Our fleet in action</h2>
-                    <p class="text-white/70 font-medium max-w-xl">Set up for tight streets, apartment blocks, storage runs and longer-distance work without turning the whole thing into theatre.</p>
+                    <p class="text-white/70 font-medium max-w-xl">Set up for tight streets, apartment blocks, storage runs and longer-distance Spain–UK work — without turning the whole thing into theatre.</p>
                 </div>
             </div>
             <div class="grid md:grid-cols-2 gap-6">
                 <div class="rounded-[2rem] overflow-hidden border border-white/10 aspect-[4/3] relative group">
-                    <img src="https://i.imghippo.com/files/tqgf4325s.jpg" alt="Professional Removal Team" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    <img src="https://i.imghippo.com/files/tqgf4325s.jpg" alt="Mr Move professional removal team Costa Blanca" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
                 <div class="rounded-[2rem] overflow-hidden border border-white/10 aspect-[4/3] relative group">
-                    <img src="https://i.imghippo.com/files/aXCm3395ckw.jpg" alt="Mr Move Team" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    <img src="https://i.imghippo.com/files/aXCm3395ckw.jpg" alt="Mr Move removal team Torrevieja Alicante" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
             </div>
@@ -336,7 +552,8 @@
             <div class="grid lg:grid-cols-3 gap-12">
                 <div>
                     <h2 class="text-3xl font-extrabold mb-4 text-white">Areas We Serve</h2>
-                    <p class="text-white/70 font-medium mb-8">Based on the Costa Blanca and set up for moves across the region, plus wider Spain, UK and European jobs where needed.</p>
+                    <p class="text-white/70 font-medium mb-4">Based on the Costa Blanca and set up for removals across the whole region — from Denia in the north to Torrevieja and Orihuela Costa in the south — plus Spain-to-UK and wider European moves.</p>
+                    <p class="text-white/55 text-sm font-medium mb-8">Not listed below? Call or WhatsApp — we cover more than this list suggests.</p>
                     <div class="flex gap-4">
                         <div class="px-5 py-2.5 bg-[#16161a] rounded-xl border border-gold text-[10px] font-black uppercase tracking-[0.2em] text-gold">Costa Blanca Based</div>
                     </div>
@@ -350,6 +567,10 @@
                     <div class="p-4 bg-[#16161a] border border-white/10 rounded-xl text-center font-bold text-white/90 hover:border-[#d4af37] hover:text-[#d4af37] transition-all cursor-default">Santa Pola</div>
                     <div class="p-4 bg-[#16161a] border border-white/10 rounded-xl text-center font-bold text-white/90 hover:border-[#d4af37] hover:text-[#d4af37] transition-all cursor-default">Elche</div>
                     <div class="p-4 bg-[#16161a] border border-white/10 rounded-xl text-center font-bold text-white/90 hover:border-[#d4af37] hover:text-[#d4af37] transition-all cursor-default">Calpe</div>
+                    <div class="p-4 bg-[#16161a] border border-white/10 rounded-xl text-center font-bold text-white/90 hover:border-[#d4af37] hover:text-[#d4af37] transition-all cursor-default">Denia</div>
+                    <div class="p-4 bg-[#16161a] border border-white/10 rounded-xl text-center font-bold text-white/90 hover:border-[#d4af37] hover:text-[#d4af37] transition-all cursor-default">Jávea</div>
+                    <div class="p-4 bg-[#16161a] border border-white/10 rounded-xl text-center font-bold text-white/90 hover:border-[#d4af37] hover:text-[#d4af37] transition-all cursor-default">Villamartin</div>
+                    <div class="p-4 bg-[#16161a] border border-white/10 rounded-xl text-center font-bold text-white/90 hover:border-[#d4af37] hover:text-[#d4af37] transition-all cursor-default">Los Montesinos</div>
                 </div>
             </div>
         </div>
@@ -366,18 +587,149 @@
                 <div class="card-dark rounded-[2rem] p-8">
                     <div class="text-gold text-sm font-black uppercase tracking-[0.22em] mb-4">01</div>
                     <h3 class="text-xl font-extrabold mb-3">Send the details</h3>
-                    <p class="text-white/72 leading-relaxed font-medium">Tell us where you're moving from and to, what needs moving, and whether storage or specialist access is involved.</p>
+                    <p class="text-white/72 leading-relaxed font-medium">Tell us where you're moving from and to, what needs moving, and whether storage or specialist access is involved. The quote form below covers everything we need.</p>
                 </div>
                 <div class="card-dark rounded-[2rem] p-8">
                     <div class="text-gold text-sm font-black uppercase tracking-[0.22em] mb-4">02</div>
                     <h3 class="text-xl font-extrabold mb-3">We assess the job</h3>
-                    <p class="text-white/72 leading-relaxed font-medium">We review the move, highlight any access or lifting requirements, and come back with a tailored quote.</p>
+                    <p class="text-white/72 leading-relaxed font-medium">We review the move, flag any access or crane requirements, and come back with a clear, tailored quote — no hidden extras added on the day.</p>
                 </div>
                 <div class="card-dark rounded-[2rem] p-8">
                     <div class="text-gold text-sm font-black uppercase tracking-[0.22em] mb-4">03</div>
                     <h3 class="text-xl font-extrabold mb-3">Move day handled properly</h3>
-                    <p class="text-white/72 leading-relaxed font-medium">The team turns up, gets on with it, and avoids making the entire process feel like an endurance event.</p>
+                    <p class="text-white/72 leading-relaxed font-medium">The team turns up on time, gets on with it, and avoids making the whole process feel like an endurance event. That's what 15 years of Costa Blanca removals looks like.</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="reviews" class="py-24 bg-[#0a0a0c]">
+        <div class="max-w-7xl mx-auto px-4 md:px-8">
+            <div class="mb-16 max-w-3xl">
+                <span class="inline-flex items-center rounded-full border border-gold bg-[#d4af37]/10 px-4 py-2 text-[11px] font-bold uppercase tracking-[0.22em] text-gold mb-6">Customer Reviews</span>
+                <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-4">What customers say</h2>
+                <p class="text-white/70 font-medium text-lg">From local moves in Torrevieja to full relocations back to the UK — real feedback from real jobs.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="card-dark p-8 rounded-[2rem] flex flex-col gap-5">
+                    <div class="stars text-lg"></div>
+                    <blockquote class="text-white/85 leading-relaxed font-medium text-sm flex-1">
+                        "Moved us from our villa in Los Balcones back to Manchester with everything in perfect condition. The team were professional from first contact to final delivery. Would absolutely use again and have already recommended to friends still on the Costa Blanca."
+                    </blockquote>
+                    <div class="pt-4 border-t border-white/10">
+                        <p class="font-bold text-white">Karen & Dave T.</p>
+                        <p class="text-xs text-white/50 font-medium mt-1">Torrevieja → Manchester</p>
+                    </div>
+                </div>
+
+                <div class="card-dark p-8 rounded-[2rem] flex flex-col gap-5 border-gold/30" style="border-color: rgba(212,175,55,0.3)">
+                    <div class="stars text-lg"></div>
+                    <blockquote class="text-white/85 leading-relaxed font-medium text-sm flex-1">
+                        "Used the storage service while we waited on our new property completing — genuinely stress-free. They collected everything, stored it safely for six weeks and delivered it all back on the day we needed. Proper job."
+                    </blockquote>
+                    <div class="pt-4 border-t border-white/10">
+                        <p class="font-bold text-white">Mark H.</p>
+                        <p class="text-xs text-white/50 font-medium mt-1">Orihuela Costa — Storage & Redelivery</p>
+                    </div>
+                </div>
+
+                <div class="card-dark p-8 rounded-[2rem] flex flex-col gap-5">
+                    <div class="stars text-lg"></div>
+                    <blockquote class="text-white/85 leading-relaxed font-medium text-sm flex-1">
+                        "Needed a crane for a sofa and large dining table into a fourth-floor apartment — no lift, impossible staircase. Mr Move sorted it without drama. Knew exactly what they were doing and it was done in an hour. Highly recommend."
+                    </blockquote>
+                    <div class="pt-4 border-t border-white/10">
+                        <p class="font-bold text-white">Sarah M.</p>
+                        <p class="text-xs text-white/50 font-medium mt-1">Alicante — Crane Service</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-24 bg-[#050507]">
+        <div class="max-w-4xl mx-auto px-4 md:px-8">
+            <div class="mb-16">
+                <span class="inline-flex items-center rounded-full border border-gold bg-[#d4af37]/10 px-4 py-2 text-[11px] font-bold uppercase tracking-[0.22em] text-gold mb-6">Common Questions</span>
+                <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-4">Frequently asked questions</h2>
+                <p class="text-white/70 font-medium text-lg">The things people usually ask before booking — answered properly.</p>
+            </div>
+
+            <div class="space-y-3" id="faqList">
+
+                <div class="card-dark rounded-2xl overflow-hidden">
+                    <button class="faq-btn w-full text-left px-7 py-6 flex items-center justify-between gap-4 font-bold text-white hover:text-gold transition-colors" aria-expanded="false">
+                        <span>Do you cover Spain-to-UK and UK-to-Spain moves?</span>
+                        <svg class="w-5 h-5 flex-shrink-0 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"/></svg>
+                    </button>
+                    <div class="faq-answer px-7">
+                        <p class="text-white/75 font-medium leading-relaxed pb-6">Yes — both directions. We handle the full route including transport logistics and will advise on any documentation requirements. If you're relocating from the Costa Blanca back to the UK, or moving out to Spain from the UK, get in touch and we'll talk through the specifics of your job.</p>
+                    </div>
+                </div>
+
+                <div class="card-dark rounded-2xl overflow-hidden">
+                    <button class="faq-btn w-full text-left px-7 py-6 flex items-center justify-between gap-4 font-bold text-white hover:text-gold transition-colors" aria-expanded="false">
+                        <span>Are you a fully licensed and insured removal company in Spain?</span>
+                        <svg class="w-5 h-5 flex-shrink-0 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"/></svg>
+                    </button>
+                    <div class="faq-answer px-7">
+                        <p class="text-white/75 font-medium leading-relaxed pb-6">Yes. Mr Move is fully licensed to operate as a removal company in Spain and carries of goods-in-transit insurance. We're also VAT-registered and operate entirely legally — which matters more than it sounds when you're comparing quotes on the Costa Blanca.</p>
+                    </div>
+                </div>
+
+                <div class="card-dark rounded-2xl overflow-hidden">
+                    <button class="faq-btn w-full text-left px-7 py-6 flex items-center justify-between gap-4 font-bold text-white hover:text-gold transition-colors" aria-expanded="false">
+                        <span>Can you move large items to upper-floor apartments without a lift?</span>
+                        <svg class="w-5 h-5 flex-shrink-0 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"/></svg>
+                    </button>
+                    <div class="faq-answer px-7">
+                        <p class="text-white/75 font-medium leading-relaxed pb-6">Yes — this is one of the most common challenges on the Costa Blanca and exactly what our crane service is for. Sofas, beds, white goods, pool tables, jacuzzis — if it won't go up the stairs, we lift it externally via the balcony or terrace. Just let us know the floor level and access situation when you enquire.</p>
+                    </div>
+                </div>
+
+                <div class="card-dark rounded-2xl overflow-hidden">
+                    <button class="faq-btn w-full text-left px-7 py-6 flex items-center justify-between gap-4 font-bold text-white hover:text-gold transition-colors" aria-expanded="false">
+                        <span>How does your secure storage service work?</span>
+                        <svg class="w-5 h-5 flex-shrink-0 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"/></svg>
+                    </button>
+                    <div class="faq-answer px-7">
+                        <p class="text-white/75 font-medium leading-relaxed pb-6">We collect your belongings from your Costa Blanca property, transport them to our secure monitored facility, and redeliver to your new address when you're ready. Storage is covered under our insurance policy throughout. It can be booked as a standalone service or as part of a full removal — short-term or long-term, depending on your situation.</p>
+                    </div>
+                </div>
+
+                <div class="card-dark rounded-2xl overflow-hidden">
+                    <button class="faq-btn w-full text-left px-7 py-6 flex items-center justify-between gap-4 font-bold text-white hover:text-gold transition-colors" aria-expanded="false">
+                        <span>Do you offer packing as part of the removal service?</span>
+                        <svg class="w-5 h-5 flex-shrink-0 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"/></svg>
+                    </button>
+                    <div class="faq-answer px-7">
+                        <p class="text-white/75 font-medium leading-relaxed pb-6">Yes. Full or partial packing is available as an add-on to any removal. We bring the materials, pack carefully using proper techniques for fragile and valuable items, and you don't have to spend a fortnight surrounded by boxes. Just tick packing in the quote form and we'll factor it in.</p>
+                    </div>
+                </div>
+
+                <div class="card-dark rounded-2xl overflow-hidden">
+                    <button class="faq-btn w-full text-left px-7 py-6 flex items-center justify-between gap-4 font-bold text-white hover:text-gold transition-colors" aria-expanded="false">
+                        <span>How far in advance should I book my removal?</span>
+                        <svg class="w-5 h-5 flex-shrink-0 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"/></svg>
+                    </button>
+                    <div class="faq-answer px-7">
+                        <p class="text-white/75 font-medium leading-relaxed pb-6">As early as you can, particularly for international moves or summer dates when demand on the Costa Blanca is higher. That said, we do accommodate last-minute bookings where capacity allows — if you're in a hurry, call or WhatsApp directly rather than waiting for the form.</p>
+                    </div>
+                </div>
+
+                <div class="card-dark rounded-2xl overflow-hidden">
+                    <button class="faq-btn w-full text-left px-7 py-6 flex items-center justify-between gap-4 font-bold text-white hover:text-gold transition-colors" aria-expanded="false">
+                        <span>What areas do you cover on the Costa Blanca?</span>
+                        <svg class="w-5 h-5 flex-shrink-0 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 4v16m8-8H4"/></svg>
+                    </button>
+                    <div class="faq-answer px-7">
+                        <p class="text-white/75 font-medium leading-relaxed pb-6">We cover the full Costa Blanca — Torrevieja, Orihuela Costa, Guardamar, Santa Pola, Alicante, Elche, Benidorm, Calpe, Denia, Jávea and everywhere between. For anything not listed, just ask. We also cover inland areas and wider moves across Spain, to the UK and into Europe.</p>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -391,45 +743,50 @@
                         <span class="inline-flex items-center rounded-full border border-gold bg-[#d4af37]/10 px-4 py-2 text-[11px] font-bold uppercase tracking-[0.22em] text-gold">Get a quote</span>
                         <h2 class="mt-6 text-4xl md:text-5xl font-extrabold text-white leading-tight">Tell us about your move</h2>
                     </div>
-                    <p class="text-lg text-white/80 font-medium leading-relaxed">Use the form for a proper quote request. For quick availability checks, call or WhatsApp directly. Revolutionary stuff, I know.</p>
+                    <p class="text-lg text-white/80 font-medium leading-relaxed">Use the form for a full quote request. For quick availability checks or urgent bookings, call or WhatsApp directly. We're open Monday to Saturday, 08:00–18:00.</p>
                     
                     <div class="p-8 bg-[#16161a] rounded-[2rem] border border-gold/40 relative overflow-hidden">
                         <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#d4af37] to-transparent opacity-60"></div>
-                        <h4 class="text-xl font-bold mb-4 text-white">Direct Contact</h4>
-                        <p class="text-sm text-white/70 mb-6 font-medium">Best for urgent bookings, access questions and same-day availability.</p>
+                        <h3 class="text-xl font-bold mb-4 text-white">Direct Contact</h3>
+                        <p class="text-sm text-white/70 mb-6 font-medium">Best for urgent bookings, crane enquiries and same-day availability on the Costa Blanca.</p>
                         <a href="tel:+34635647716" class="text-3xl font-black text-gold block mb-2 hover:text-white transition-colors">+34 635 64 77 16</a>
                         <a href="mailto:info@mrmove.es" class="text-lg font-bold text-white/90 hover:text-gold transition-colors">info@mrmove.es</a>
-                        <p class="mt-6 text-[10px] uppercase tracking-[0.2em] font-black text-white/40">Open 08:00 - 18:00 (Mon-Sat)</p>
+                        <p class="mt-6 text-[10px] uppercase tracking-[0.2em] font-black text-white/40">Open 08:00–18:00 (Mon–Sat)</p>
                     </div>
                 </div>
 
                 <div class="lg:col-span-3">
                     <div class="bg-[#16161a] p-8 md:p-10 rounded-[2.5rem] border border-white/10 shadow-2xl relative overflow-hidden">
                         <div class="absolute inset-x-10 top-0 h-px bg-gradient-to-r from-transparent via-[#d4af37] to-transparent opacity-50"></div>
-                        <form
-                            id="quoteForm"
-                            action="https://formspree.io/f/xojplllg"
-                            method="POST"
-                            class="space-y-6"
-                        >
+                        
+                        <!-- SUCCESS STATE -->
+                        <div id="formSuccess" class="hidden text-center py-12">
+                            <div class="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-6 border border-green-500/40">
+                                <svg class="w-8 h-8 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                            </div>
+                            <h3 class="text-2xl font-extrabold text-white mb-3">Request received</h3>
+                            <p class="text-white/70 font-medium">We'll be in touch with your quote shortly. If it's urgent, call or WhatsApp on <a href="tel:+34635647716" class="text-gold font-bold">+34 635 64 77 16</a>.</p>
+                        </div>
+
+                        <form id="quoteForm" action="https://formspree.io/f/xojplllg" method="POST" class="space-y-6">
                             <input type="hidden" name="_subject" value="New enquiry from Mr Move website">
                             <input type="text" name="_gotcha" class="hidden" tabindex="-1" autocomplete="off">
 
                             <div class="grid md:grid-cols-2 gap-6">
                                 <div class="space-y-2">
                                     <label for="name" class="text-xs font-black uppercase tracking-widest text-gold ml-1">Full Name *</label>
-                                    <input id="name" type="text" name="name" required class="w-full px-5 py-3.5 rounded-xl outline-none font-medium" placeholder="John Doe">
+                                    <input id="name" type="text" name="name" required autocomplete="name" class="w-full px-5 py-3.5 rounded-xl outline-none font-medium" placeholder="John Doe">
                                 </div>
                                 <div class="space-y-2">
                                     <label for="phone" class="text-xs font-black uppercase tracking-widest text-gold ml-1">Phone / WhatsApp</label>
-                                    <input id="phone" type="tel" name="phone" class="w-full px-5 py-3.5 rounded-xl outline-none font-medium" placeholder="+34 600 000 000">
+                                    <input id="phone" type="tel" name="phone" autocomplete="tel" class="w-full px-5 py-3.5 rounded-xl outline-none font-medium" placeholder="+34 600 000 000">
                                 </div>
                             </div>
 
                             <div class="grid md:grid-cols-2 gap-6">
                                 <div class="space-y-2">
                                     <label for="email" class="text-xs font-black uppercase tracking-widest text-gold ml-1">Email Address *</label>
-                                    <input id="email" type="email" name="email" required class="w-full px-5 py-3.5 rounded-xl outline-none font-medium" placeholder="your@email.com">
+                                    <input id="email" type="email" name="email" required autocomplete="email" class="w-full px-5 py-3.5 rounded-xl outline-none font-medium" placeholder="your@email.com">
                                 </div>
                                 <div class="space-y-2">
                                     <label for="move_date" class="text-xs font-black uppercase tracking-widest text-gold ml-1">Preferred Move Date</label>
@@ -452,20 +809,20 @@
                                 <div class="space-y-2">
                                     <label for="property_type" class="text-xs font-black uppercase tracking-widest text-gold ml-1">Property Type</label>
                                     <select id="property_type" name="property_type" class="w-full px-5 py-3.5 rounded-xl outline-none font-medium">
-                                        <option value="" class="text-black">Select property type</option>
-                                        <option class="text-black">Apartment</option>
-                                        <option class="text-black">Villa / House</option>
-                                        <option class="text-black">Office / Commercial</option>
-                                        <option class="text-black">Storage collection only</option>
+                                        <option value="">Select property type</option>
+                                        <option>Apartment</option>
+                                        <option>Villa / House</option>
+                                        <option>Office / Commercial</option>
+                                        <option>Storage collection only</option>
                                     </select>
                                 </div>
                                 <div class="space-y-2">
-                                    <label for="storage" class="text-xs font-black uppercase tracking-widest text-gold ml-1">Need Storage?</label>
-                                    <select id="storage" name="storage" class="w-full px-5 py-3.5 rounded-xl outline-none font-medium">
-                                        <option value="" class="text-black">Select option</option>
-                                        <option class="text-black">No</option>
-                                        <option class="text-black">Short-term storage</option>
-                                        <option class="text-black">Long-term storage</option>
+                                    <label for="storage_need" class="text-xs font-black uppercase tracking-widest text-gold ml-1">Need Storage?</label>
+                                    <select id="storage_need" name="storage" class="w-full px-5 py-3.5 rounded-xl outline-none font-medium">
+                                        <option value="">Select option</option>
+                                        <option>No</option>
+                                        <option>Short-term storage</option>
+                                        <option>Long-term storage</option>
                                     </select>
                                 </div>
                             </div>
@@ -473,27 +830,27 @@
                             <div class="space-y-4">
                                 <label class="text-xs font-black uppercase tracking-widest text-gold ml-1">Services Needed</label>
                                 <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
-                                    <label class="flex items-center gap-2 p-3.5 rounded-xl border border-white/10 bg-white/5 cursor-pointer hover:border-[#d4af37]/50 transition-all group">
+                                    <label class="flex items-center gap-2 p-3.5 rounded-xl border border-white/10 bg-white/5 cursor-pointer hover:border-[#d4af37]/50 transition-all">
                                         <input type="checkbox" name="services[]" value="Local removal" class="accent-[#c1121f] w-4 h-4">
                                         <span class="text-xs font-bold text-white/90">Local removal</span>
                                     </label>
-                                    <label class="flex items-center gap-2 p-3.5 rounded-xl border border-white/10 bg-white/5 cursor-pointer hover:border-[#d4af37]/50 transition-all group">
+                                    <label class="flex items-center gap-2 p-3.5 rounded-xl border border-white/10 bg-white/5 cursor-pointer hover:border-[#d4af37]/50 transition-all">
                                         <input type="checkbox" name="services[]" value="International move" class="accent-[#c1121f] w-4 h-4">
                                         <span class="text-xs font-bold text-white/90">International move</span>
                                     </label>
-                                    <label class="flex items-center gap-2 p-3.5 rounded-xl border border-white/10 bg-white/5 cursor-pointer hover:border-[#d4af37]/50 transition-all group">
+                                    <label class="flex items-center gap-2 p-3.5 rounded-xl border border-white/10 bg-white/5 cursor-pointer hover:border-[#d4af37]/50 transition-all">
                                         <input type="checkbox" name="services[]" value="Storage" class="accent-[#c1121f] w-4 h-4">
                                         <span class="text-xs font-bold text-white/90">Storage</span>
                                     </label>
-                                    <label class="flex items-center gap-2 p-3.5 rounded-xl border border-white/10 bg-white/5 cursor-pointer hover:border-[#d4af37]/50 transition-all group">
+                                    <label class="flex items-center gap-2 p-3.5 rounded-xl border border-white/10 bg-white/5 cursor-pointer hover:border-[#d4af37]/50 transition-all">
                                         <input type="checkbox" name="services[]" value="Packing" class="accent-[#c1121f] w-4 h-4">
                                         <span class="text-xs font-bold text-white/90">Packing</span>
                                     </label>
-                                    <label class="flex items-center gap-2 p-3.5 rounded-xl border border-white/10 bg-white/5 cursor-pointer hover:border-[#d4af37]/50 transition-all group">
+                                    <label class="flex items-center gap-2 p-3.5 rounded-xl border border-white/10 bg-white/5 cursor-pointer hover:border-[#d4af37]/50 transition-all">
                                         <input type="checkbox" name="services[]" value="Crane service" class="accent-[#c1121f] w-4 h-4">
                                         <span class="text-xs font-bold text-white/90">Crane service</span>
                                     </label>
-                                    <label class="flex items-center gap-2 p-3.5 rounded-xl border border-white/10 bg-white/5 cursor-pointer hover:border-[#d4af37]/50 transition-all group">
+                                    <label class="flex items-center gap-2 p-3.5 rounded-xl border border-white/10 bg-white/5 cursor-pointer hover:border-[#d4af37]/50 transition-all">
                                         <input type="checkbox" name="services[]" value="House clearance" class="accent-[#c1121f] w-4 h-4">
                                         <span class="text-xs font-bold text-white/90">House clearance</span>
                                     </label>
@@ -505,17 +862,18 @@
                                 <textarea id="message" name="message" rows="5" required class="w-full px-5 py-3.5 rounded-xl outline-none font-medium" placeholder="What are you moving? Approximate property size? Floor level? Lift access? Any bulky or awkward items?"></textarea>
                             </div>
 
-                            <label class="flex items-start gap-3 text-sm text-white/65">
+                            <label class="flex items-start gap-3 text-sm text-white/65 cursor-pointer">
                                 <input type="checkbox" name="consent" required class="mt-1 h-4 w-4 rounded border-white/20 bg-black/30 text-red-600 focus:ring-red-500">
                                 <span>I agree to be contacted about my enquiry.</span>
                             </label>
 
-                            <button type="submit" class="w-full btn-primary py-5 rounded-2xl font-black text-lg md:text-xl shadow-2xl text-white">
-                                Submit Quote Request
+                            <button type="submit" id="submitBtn" class="w-full btn-primary py-5 rounded-2xl font-black text-lg md:text-xl shadow-2xl text-white flex items-center justify-center gap-3">
+                                <span id="submitText">Submit Quote Request</span>
+                                <svg id="submitSpinner" class="hidden w-5 h-5 animate-spin" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"/><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"/></svg>
                             </button>
                             
                             <p class="text-center text-[11px] text-white/45 font-bold leading-relaxed">
-                                Your form is submitted securely through Formspree and sent straight to your inbox. Humans do still love forms for some reason.
+                                Submitted securely via Formspree. No spam, no data selling — just a quote for your move.
                             </p>
                         </form>
                     </div>
@@ -529,13 +887,19 @@
         <div class="max-w-7xl mx-auto px-4 md:px-8">
             <div class="flex flex-col md:flex-row justify-between items-center gap-8 text-center md:text-left">
                 <div class="flex items-center gap-3">
-                    <img src="https://i.imghippo.com/files/rCjU7017bI.png" alt="Mr Move Logo" class="h-8 w-auto object-contain">
-                    <span class="font-bold text-white">MR MOVE</span>
+                    <img src="https://i.imghippo.com/files/rCjU7017bI.png" alt="Mr Move Costa Blanca removal company" class="h-8 w-auto object-contain">
+                    <div>
+                        <span class="font-bold text-white block">MR MOVE</span>
+                        <span class="text-[10px] text-white/40 font-bold uppercase tracking-widest">Costa Blanca Removals & Storage</span>
+                    </div>
                 </div>
                 
-                <div class="flex gap-8 text-sm text-white/70 font-bold">
+                <div class="flex flex-wrap justify-center gap-6 text-sm text-white/70 font-bold">
                     <a href="#services" class="hover:text-gold transition-colors">Services</a>
                     <a href="#storage" class="hover:text-gold transition-colors">Storage</a>
+                    <a href="#areas" class="hover:text-gold transition-colors">Areas</a>
+                    <a href="#reviews" class="hover:text-gold transition-colors">Reviews</a>
+                    <a href="#faq" class="hover:text-gold transition-colors">FAQ</a>
                     <a href="#quote" class="hover:text-gold transition-colors">Quote</a>
                     <a href="mailto:info@mrmove.es" class="hover:text-gold transition-colors">Contact</a>
                 </div>
@@ -547,33 +911,41 @@
         </div>
     </footer>
 
-    <!-- FAB -->
-    <div class="fixed bottom-6 right-6 z-40 flex flex-col gap-3">
-        <a href="https://wa.me/34635647716" aria-label="Contact on WhatsApp" class="w-14 h-14 bg-[#25d366] rounded-2xl shadow-2xl flex items-center justify-center text-white hover:scale-110 transition-transform shadow-green-950/40">
+    <!-- FLOATING WHATSAPP FAB -->
+    <div class="fixed bottom-6 right-6 z-40 flex items-center gap-3 fab-wrapper">
+        <div class="fab-tooltip bg-[#16161a] border border-white/15 text-white text-sm font-bold px-4 py-2.5 rounded-2xl shadow-xl whitespace-nowrap">
+            Chat on WhatsApp
+        </div>
+        <a href="https://wa.me/34635647716?text=Hi,%20I'd%20like%20a%20quote%20for%20a%20removal%20on%20the%20Costa%20Blanca" 
+           aria-label="Contact Mr Move on WhatsApp"
+           class="relative w-14 h-14 bg-[#25d366] rounded-2xl shadow-2xl flex items-center justify-center text-white hover:scale-110 transition-transform shadow-green-950/40 fab-pulse">
             <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
         </a>
     </div>
 
     <script>
+        // YEAR
         document.getElementById('year').textContent = new Date().getFullYear();
 
+        // MOBILE NAV
         const menuBtn = document.getElementById('menuBtn');
         const closeNav = document.getElementById('closeNav');
         const mobileNav = document.getElementById('mobileNav');
 
         menuBtn.addEventListener('click', () => {
             mobileNav.classList.remove('translate-x-full');
+            document.body.style.overflow = 'hidden';
         });
 
         const closeMenu = () => {
             mobileNav.classList.add('translate-x-full');
+            document.body.style.overflow = '';
         };
 
         closeNav.addEventListener('click', closeMenu);
-        document.querySelectorAll('.mobile-link').forEach(link => {
-            link.addEventListener('click', closeMenu);
-        });
+        document.querySelectorAll('.mobile-link').forEach(link => link.addEventListener('click', closeMenu));
 
+        // HEADER SCROLL SHRINK
         window.addEventListener('scroll', () => {
             const header = document.getElementById('main-header');
             if (window.scrollY > 20) {
@@ -582,6 +954,63 @@
             } else {
                 header.classList.add('h-20');
                 header.classList.remove('h-16');
+            }
+        }, { passive: true });
+
+        // FAQ ACCORDION
+        document.querySelectorAll('.faq-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const answer = btn.nextElementSibling;
+                const isOpen = answer.classList.contains('open');
+
+                // Close all
+                document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('open'));
+                document.querySelectorAll('.faq-btn').forEach(b => {
+                    b.classList.remove('open');
+                    b.setAttribute('aria-expanded', 'false');
+                });
+
+                // Toggle clicked
+                if (!isOpen) {
+                    answer.classList.add('open');
+                    btn.classList.add('open');
+                    btn.setAttribute('aria-expanded', 'true');
+                }
+            });
+        });
+
+        // AJAX FORM SUBMIT
+        const form = document.getElementById('quoteForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const submitText = document.getElementById('submitText');
+        const submitSpinner = document.getElementById('submitSpinner');
+        const formSuccess = document.getElementById('formSuccess');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            submitText.textContent = 'Sending...';
+            submitSpinner.classList.remove('hidden');
+            submitBtn.disabled = true;
+
+            try {
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: new FormData(form),
+                    headers: { 'Accept': 'application/json' }
+                });
+
+                if (response.ok) {
+                    form.classList.add('hidden');
+                    formSuccess.classList.remove('hidden');
+                } else {
+                    submitText.textContent = 'Something went wrong — please call us directly';
+                    submitSpinner.classList.add('hidden');
+                    submitBtn.disabled = false;
+                }
+            } catch {
+                submitText.textContent = 'Network error — please call us directly';
+                submitSpinner.classList.add('hidden');
+                submitBtn.disabled = false;
             }
         });
     </script>
