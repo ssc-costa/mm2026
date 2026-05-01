@@ -986,33 +986,45 @@
         const submitSpinner = document.getElementById('submitSpinner');
         const formSuccess = document.getElementById('formSuccess');
 
-        form.addEventListener('submit', async (e) => {
-            e.preventDefault();
-            submitText.textContent = 'Sending...';
-            submitSpinner.classList.remove('hidden');
-            submitBtn.disabled = true;
+form.addEventListener('submit', async (e) => {
+    e.preventDefault();
 
-            try {
-                const response = await fetch(form.action, {
-                    method: 'POST',
-                    body: new FormData(form),
-                    headers: { 'Accept': 'application/json' }
-                });
+    submitText.textContent = 'Sending...';
+    submitSpinner.classList.remove('hidden');
+    submitBtn.disabled = true;
 
-                if (response.ok) {
-                    form.classList.add('hidden');
-                    formSuccess.classList.remove('hidden');
-                } else {
-                    submitText.textContent = 'Something went wrong — please call us directly';
-                    submitSpinner.classList.add('hidden');
-                    submitBtn.disabled = false;
-                }
-            } catch {
-                submitText.textContent = 'Network error — please call us directly';
-                submitSpinner.classList.add('hidden');
-                submitBtn.disabled = false;
+    try {
+        const formData = new FormData(form);
+
+        const response = await fetch(form.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
             }
         });
+
+        const data = await response.json().catch(() => null);
+
+        if (response.ok) {
+            form.classList.add('hidden');
+            formSuccess.classList.remove('hidden');
+            form.reset();
+        } else {
+            console.error('Formspree error:', data);
+
+            submitText.textContent = data?.errors?.[0]?.message || 'Something went wrong — please call us directly';
+            submitSpinner.classList.add('hidden');
+            submitBtn.disabled = false;
+        }
+    } catch (error) {
+        console.error('Form submit failed:', error);
+
+        submitText.textContent = 'Network error — please call us directly';
+        submitSpinner.classList.add('hidden');
+        submitBtn.disabled = false;
+    }
+});
     </script>
 </body>
 </html>
