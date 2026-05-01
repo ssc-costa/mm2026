@@ -137,6 +137,11 @@
                 radial-gradient(circle at top left, rgba(217,22,36,0.08), transparent 24%),
                 var(--bg);
             color: var(--text);
+            padding-bottom: 70px;
+        }
+
+        @media (min-width: 768px) {
+            body { padding-bottom: 0; }
         }
 
         .glass {
@@ -275,6 +280,10 @@
                     <a href="#reviews" class="hover:text-gold transition-colors">Reviews</a>
                     <a href="#faq" class="hover:text-gold transition-colors">FAQ</a>
                     <a href="#quote" class="hover:text-gold transition-colors">Quote</a>
+                    <div class="flex items-center gap-1 border border-white/20 rounded-full px-1 py-1 text-xs font-bold">
+                        <button id="langEN" onclick="setLang('en')" class="lang-btn px-2.5 py-1 rounded-full bg-white/10 text-white active-lang">EN</button>
+                        <button id="langES" onclick="setLang('es')" class="lang-btn px-2.5 py-1 rounded-full text-white/50 hover:text-white transition-colors">ES</button>
+                    </div>
                 </nav>
 
                 <div class="flex items-center gap-4">
@@ -355,12 +364,12 @@
                             <p class="text-[10px] uppercase tracking-widest text-white/60 font-bold">Years Exp</p>
                         </div>
                         <div class="space-y-1">
-                            <p class="text-2xl font-black text-white">Goods in Transit</p>
-                            <p class="text-[10px] uppercase tracking-widest text-white/60 font-bold">Insured Cover</p>
+                            <p class="text-2xl font-black text-white">Insured</p>
+                            <p class="text-[10px] uppercase tracking-widest text-white/60 font-bold">Goods in Transit</p>
                         </div>
                         <div class="space-y-1">
-                            <p class="text-2xl font-black text-white">100%</p>
-                            <p class="text-[10px] uppercase tracking-widest text-white/60 font-bold">Fully Legal</p>
+                            <p class="text-2xl font-black text-white">Licensed</p>
+                            <p class="text-[10px] uppercase tracking-widest text-white/60 font-bold">& VAT Registered</p>
                         </div>
                         <div class="space-y-1">
                             <p class="text-2xl font-black text-white">Costa Blanca</p>
@@ -407,10 +416,10 @@
                         <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                     </div>
                     <h3 class="text-xl font-extrabold mb-3 text-white">Spain–UK & European Moves</h3>
-                    <p class="text-white/80 text-sm leading-relaxed mb-6 font-medium">Straightforward support for Spain-to-UK and UK-to-Spain relocations, with full transport planning and experienced handling from door to door across the whole route.</p>
+                    <p class="text-white/80 text-sm leading-relaxed mb-6 font-medium">Straightforward support for Spain-to-UK and UK-to-Spain relocations, with full transport planning and experienced handling from door to door across the whole route. We advise on post-Brexit customs documentation so there are no border surprises.</p>
                     <ul class="space-y-2 text-[10px] font-bold text-gold uppercase tracking-widest">
-                        <li class="flex items-center gap-2">✓ Long-distance transport</li>
-                        <li class="flex items-center gap-2">✓ Practical support throughout</li>
+                        <li class="flex items-center gap-2">✓ Door-to-door, same crew</li>
+                        <li class="flex items-center gap-2">✓ Post-Brexit customs support</li>
                     </ul>
                 </div>
 
@@ -463,6 +472,19 @@
                     <ul class="space-y-2 text-[10px] font-bold text-gold uppercase tracking-widest">
                         <li class="flex items-center gap-2">✓ Full or partial clearance</li>
                         <li class="flex items-center gap-2">✓ Responsible disposal</li>
+                    </ul>
+                </div>
+
+                <!-- Part Load -->
+                <div class="card-dark p-8 rounded-[2rem]">
+                    <div class="w-14 h-14 bg-teal-500/20 rounded-2xl flex items-center justify-center text-teal-400 mb-6 border border-teal-500/30">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2"/></svg>
+                    </div>
+                    <h3 class="text-xl font-extrabold mb-3 text-white">Part-Load Moves</h3>
+                    <p class="text-white/80 text-sm leading-relaxed mb-6 font-medium">Not filling a full van? Part-load moves let you share the vehicle and share the cost — ideal for smaller households, individual rooms or sending items ahead while you travel. Same care, lower price.</p>
+                    <ul class="space-y-2 text-[10px] font-bold text-gold uppercase tracking-widest">
+                        <li class="flex items-center gap-2">✓ Flexible for smaller moves</li>
+                        <li class="flex items-center gap-2">✓ Cost-effective option</li>
                     </ul>
                 </div>
             </div>
@@ -610,6 +632,10 @@
                 <span class="inline-flex items-center rounded-full border border-gold bg-[#d4af37]/10 px-4 py-2 text-[11px] font-bold uppercase tracking-[0.22em] text-gold mb-6">Customer Reviews</span>
                 <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-4">What customers say</h2>
                 <p class="text-white/70 font-medium text-lg">From local moves in Torrevieja to full relocations back to the UK — real feedback from real jobs.</p>
+                <a href="https://www.google.com/search?q=Mr+Move+Costa+Blanca+reviews" target="_blank" rel="noopener" class="inline-flex items-center gap-2 mt-4 text-sm font-bold text-gold hover:text-white transition-colors underline decoration-2 underline-offset-4">
+                    See all Google reviews
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                </a>
             </div>
 
             <div class="grid md:grid-cols-3 gap-6">
@@ -911,6 +937,21 @@
         </div>
     </footer>
 
+    <!-- MOBILE STICKY CTA BAR -->
+    <div class="fixed bottom-0 left-0 right-0 z-30 md:hidden bg-[#0d0d10]/95 backdrop-blur-xl border-t border-white/10 px-4 py-3 flex gap-3">
+        <a href="tel:+34635647716" class="flex-1 flex items-center justify-center gap-2 bg-white/8 border border-white/15 text-white font-bold py-3 rounded-xl text-sm">
+            <svg class="w-4 h-4 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+            Call Us
+        </a>
+        <a href="https://wa.me/34635647716?text=Hi,%20I'd%20like%20a%20quote%20for%20a%20removal%20on%20the%20Costa%20Blanca" class="flex-1 flex items-center justify-center gap-2 bg-[#25d366] text-white font-bold py-3 rounded-xl text-sm">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp
+        </a>
+        <a href="#quote" class="flex-1 flex items-center justify-center gap-2 btn-primary text-white font-bold py-3 rounded-xl text-sm">
+            Get Quote
+        </a>
+    </div>
+
     <!-- FLOATING WHATSAPP FAB -->
     <div class="fixed bottom-6 right-6 z-40 flex items-center gap-3 fab-wrapper">
         <div class="fab-tooltip bg-[#16161a] border border-white/15 text-white text-sm font-bold px-4 py-2.5 rounded-2xl shadow-xl whitespace-nowrap">
@@ -925,29 +966,35 @@
 
     <script>
         // YEAR
-        document.getElementById('year').textContent = new Date().getFullYear();
+        const yearEl = document.getElementById('year');
+        if (yearEl) yearEl.textContent = new Date().getFullYear();
 
         // MOBILE NAV
         const menuBtn = document.getElementById('menuBtn');
         const closeNav = document.getElementById('closeNav');
         const mobileNav = document.getElementById('mobileNav');
 
-        menuBtn.addEventListener('click', () => {
-            mobileNav.classList.remove('translate-x-full');
-            document.body.style.overflow = 'hidden';
-        });
-
         const closeMenu = () => {
+            if (!mobileNav) return;
             mobileNav.classList.add('translate-x-full');
             document.body.style.overflow = '';
         };
 
-        closeNav.addEventListener('click', closeMenu);
+        if (menuBtn && mobileNav) {
+            menuBtn.addEventListener('click', () => {
+                mobileNav.classList.remove('translate-x-full');
+                document.body.style.overflow = 'hidden';
+            });
+        }
+
+        if (closeNav) closeNav.addEventListener('click', closeMenu);
         document.querySelectorAll('.mobile-link').forEach(link => link.addEventListener('click', closeMenu));
 
         // HEADER SCROLL SHRINK
         window.addEventListener('scroll', () => {
             const header = document.getElementById('main-header');
+            if (!header) return;
+
             if (window.scrollY > 20) {
                 header.classList.add('h-16');
                 header.classList.remove('h-20');
@@ -961,16 +1008,16 @@
         document.querySelectorAll('.faq-btn').forEach(btn => {
             btn.addEventListener('click', () => {
                 const answer = btn.nextElementSibling;
+                if (!answer) return;
+
                 const isOpen = answer.classList.contains('open');
 
-                // Close all
                 document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('open'));
                 document.querySelectorAll('.faq-btn').forEach(b => {
                     b.classList.remove('open');
                     b.setAttribute('aria-expanded', 'false');
                 });
 
-                // Toggle clicked
                 if (!isOpen) {
                     answer.classList.add('open');
                     btn.classList.add('open');
@@ -986,45 +1033,110 @@
         const submitSpinner = document.getElementById('submitSpinner');
         const formSuccess = document.getElementById('formSuccess');
 
-form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-
-    submitText.textContent = 'Sending...';
-    submitSpinner.classList.remove('hidden');
-    submitBtn.disabled = true;
-
-    try {
-        const formData = new FormData(form);
-
-        const response = await fetch(form.action, {
-            method: 'POST',
-            body: formData,
-            headers: {
-                'Accept': 'application/json'
-            }
-        });
-
-        const data = await response.json().catch(() => null);
-
-        if (response.ok) {
-            form.classList.add('hidden');
-            formSuccess.classList.remove('hidden');
-            form.reset();
-        } else {
-            console.error('Formspree error:', data);
-
-            submitText.textContent = data?.errors?.[0]?.message || 'Something went wrong — please call us directly';
-            submitSpinner.classList.add('hidden');
-            submitBtn.disabled = false;
+        function removeFormError() {
+            const oldBanner = document.getElementById('formErrorBanner');
+            if (oldBanner) oldBanner.remove();
         }
-    } catch (error) {
-        console.error('Form submit failed:', error);
 
-        submitText.textContent = 'Network error — please call us directly';
-        submitSpinner.classList.add('hidden');
-        submitBtn.disabled = false;
-    }
-});
+        function showFormError(message) {
+            removeFormError();
+
+            const banner = document.createElement('div');
+            banner.id = 'formErrorBanner';
+            banner.className = 'bg-[#1a1a20] border border-[#d4af37]/40 rounded-2xl p-5 text-center';
+            banner.innerHTML = `
+                <p class="text-white font-bold mb-1">Couldn't send the form right now</p>
+                <p class="text-white/65 text-sm mb-4">${message || "The form service rejected the request. Humanity survives, barely."}</p>
+                <div class="flex flex-col sm:flex-row gap-3 justify-center">
+                    <a href="https://wa.me/34635647716?text=Hi,%20I'd%20like%20a%20quote%20for%20a%20removal" class="flex items-center justify-center gap-2 bg-[#25d366] text-white font-bold px-5 py-3 rounded-xl text-sm">WhatsApp Us</a>
+                    <a href="tel:+34635647716" class="flex items-center justify-center gap-2 bg-white/8 border border-white/20 text-white font-bold px-5 py-3 rounded-xl text-sm">+34 635 64 77 16</a>
+                    <a href="mailto:info@mrmove.es" class="flex items-center justify-center gap-2 bg-white/8 border border-white/20 text-white font-bold px-5 py-3 rounded-xl text-sm">Email Us</a>
+                </div>
+            `;
+
+            if (submitBtn && submitBtn.parentNode) {
+                submitBtn.parentNode.insertBefore(banner, submitBtn);
+            }
+        }
+
+        function setSubmitState(isSending) {
+            if (!submitBtn || !submitText || !submitSpinner) return;
+            submitText.textContent = isSending ? 'Sending...' : 'Submit Quote Request';
+            submitSpinner.classList.toggle('hidden', !isSending);
+            submitBtn.disabled = isSending;
+        }
+
+        if (form && submitBtn && submitText && submitSpinner && formSuccess) {
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                removeFormError();
+                setSubmitState(true);
+
+                try {
+                    const formData = new FormData(form);
+                    formData.append('_replyto', formData.get('email') || '');
+
+                    const response = await fetch(form.action, {
+                        method: 'POST',
+                        body: formData,
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    });
+
+                    const data = await response.json().catch(() => null);
+
+                    if (!response.ok) {
+                        const errorMessage = data?.errors?.map(error => error.message).join(' ') || data?.message || `Formspree returned ${response.status}.`;
+                        throw new Error(errorMessage);
+                    }
+
+                    form.reset();
+                    form.classList.add('hidden');
+                    formSuccess.classList.remove('hidden');
+                } catch (error) {
+                    console.error('Form submit failed:', error);
+                    setSubmitState(false);
+                    showFormError(error.message);
+                }
+            });
+        }
+
+        // LANGUAGE TOGGLE
+        const translations = {
+            en: {
+                heroH1: 'Removals, storage and specialist lifting across the <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-[#d4af37] to-[#d91624]">Costa Blanca.</span>',
+                heroP: "From local man-and-van jobs in Torrevieja and Alicante to full Spain–UK relocations, secure insured storage and crane-assisted access — Mr Move handles the awkward parts so your move feels less like a punishment."
+            },
+            es: {
+                heroH1: 'Mudanzas, almacenaje y elevación especializada por toda la <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-[#d4af37] to-[#d91624]">Costa Blanca.</span>',
+                heroP: "Desde mudanzas locales en Torrevieja y Alicante hasta traslados completos España–Reino Unido, almacenaje seguro y acceso con grúa — Mr Move se encarga de la parte difícil para que tu mudanza sea más fácil."
+            }
+        };
+
+        function setLang(lang) {
+            const t = translations[lang];
+            if (!t) return;
+
+            const h1 = document.querySelector('#top h1');
+            if (h1) h1.innerHTML = t.heroH1;
+
+            const heroP = document.querySelector('#top p.text-lg');
+            if (heroP) heroP.textContent = t.heroP;
+
+            const langEN = document.getElementById('langEN');
+            const langES = document.getElementById('langES');
+
+            if (langEN) {
+                langEN.classList.toggle('bg-white/10', lang === 'en');
+                langEN.classList.toggle('text-white/50', lang !== 'en');
+            }
+
+            if (langES) {
+                langES.classList.toggle('bg-white/10', lang === 'es');
+                langES.classList.toggle('text-white/50', lang !== 'es');
+            }
+        }
     </script>
 </body>
 </html>
