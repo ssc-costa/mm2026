@@ -794,7 +794,7 @@
                             <p class="text-white/70 font-medium">We'll be in touch with your quote shortly. If it's urgent, call or WhatsApp on <a href="tel:+34635647716" class="text-gold font-bold">+34 635 64 77 16</a>.</p>
                         </div>
 
-                        <form id="quoteForm" action="https://formspree.io/f/xojplllg" method="POST" class="space-y-6">
+                        <form id="quoteForm" action="/api/contact" method="POST" class="space-y-6">
                             <input type="hidden" name="_subject" value="New enquiry from Mr Move website">
                             <input type="text" name="_gotcha" class="hidden" tabindex="-1" autocomplete="off">
 
@@ -1027,80 +1027,80 @@
         });
 
         // AJAX FORM SUBMIT
-        const form = document.getElementById('quoteForm');
-        const submitBtn = document.getElementById('submitBtn');
-        const submitText = document.getElementById('submitText');
-        const submitSpinner = document.getElementById('submitSpinner');
-        const formSuccess = document.getElementById('formSuccess');
+        const quoteForm = document.getElementById("quoteForm");
+const formSuccess = document.getElementById("formSuccess");
+const submitBtn = document.getElementById("submitBtn");
 
-        function removeFormError() {
-            const oldBanner = document.getElementById('formErrorBanner');
-            if (oldBanner) oldBanner.remove();
-        }
+if (quoteForm) {
+  quoteForm.addEventListener("submit", async function (event) {
+    event.preventDefault();
 
-        function showFormError(message) {
-            removeFormError();
+    const oldError = quoteForm.querySelector(".form-error");
+    if (oldError) oldError.remove();
 
-            const banner = document.createElement('div');
-            banner.id = 'formErrorBanner';
-            banner.className = 'bg-[#1a1a20] border border-[#d4af37]/40 rounded-2xl p-5 text-center';
-            banner.innerHTML = `
-                <p class="text-white font-bold mb-1">Couldn't send the form right now</p>
-                <p class="text-white/65 text-sm mb-4">${message || "The form service rejected the request. Humanity survives, barely."}</p>
-                <div class="flex flex-col sm:flex-row gap-3 justify-center">
-                    <a href="https://wa.me/34635647716?text=Hi,%20I'd%20like%20a%20quote%20for%20a%20removal" class="flex items-center justify-center gap-2 bg-[#25d366] text-white font-bold px-5 py-3 rounded-xl text-sm">WhatsApp Us</a>
-                    <a href="tel:+34635647716" class="flex items-center justify-center gap-2 bg-white/8 border border-white/20 text-white font-bold px-5 py-3 rounded-xl text-sm">+34 635 64 77 16</a>
-                    <a href="mailto:info@mrmove.es" class="flex items-center justify-center gap-2 bg-white/8 border border-white/20 text-white font-bold px-5 py-3 rounded-xl text-sm">Email Us</a>
-                </div>
-            `;
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Sending...";
+      submitBtn.classList.add("opacity-70", "cursor-not-allowed");
+    }
 
-            if (submitBtn && submitBtn.parentNode) {
-                submitBtn.parentNode.insertBefore(banner, submitBtn);
-            }
-        }
+    try {
+      const formData = new FormData(quoteForm);
 
-        function setSubmitState(isSending) {
-            if (!submitBtn || !submitText || !submitSpinner) return;
-            submitText.textContent = isSending ? 'Sending...' : 'Submit Quote Request';
-            submitSpinner.classList.toggle('hidden', !isSending);
-            submitBtn.disabled = isSending;
-        }
+      const services = formData.getAll("services[]");
 
-        if (form && submitBtn && submitText && submitSpinner && formSuccess) {
-            form.addEventListener('submit', async (e) => {
-                e.preventDefault();
-                removeFormError();
-                setSubmitState(true);
+      const payload = {
+        name: formData.get("name"),
+        email: formData.get("email"),
+        phone: formData.get("phone"),
+        move_date: formData.get("move_date"),
+        pickup: formData.get("pickup"),
+        delivery: formData.get("delivery"),
+        property_type: formData.get("property_type"),
+        storage: formData.get("storage"),
+        services,
+        message: formData.get("message"),
+        _gotcha: formData.get("_gotcha")
+      };
 
-                try {
-                    const formData = new FormData(form);
-                    formData.append('_replyto', formData.get('email') || '');
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(payload)
+      });
 
-                    const response = await fetch(form.action, {
-                        method: 'POST',
-                        body: formData,
-                        headers: {
-                            'Accept': 'application/json'
-                        }
-                    });
+      const result = await response.json().catch(() => null);
 
-                    const data = await response.json().catch(() => null);
+      if (!response.ok || !result?.ok) {
+        throw new Error(result?.error || "Something went wrong. Please call us directly.");
+      }
 
-                    if (!response.ok) {
-                        const errorMessage = data?.errors?.map(error => error.message).join(' ') || data?.message || `Formspree returned ${response.status}.`;
-                        throw new Error(errorMessage);
-                    }
+      quoteForm.classList.add("hidden");
 
-                    form.reset();
-                    form.classList.add('hidden');
-                    formSuccess.classList.remove('hidden');
-                } catch (error) {
-                    console.error('Form submit failed:', error);
-                    setSubmitState(false);
-                    showFormError(error.message);
-                }
-            });
-        }
+      if (formSuccess) {
+        formSuccess.classList.remove("hidden");
+      }
+    } catch (error) {
+      console.error("Form submit error:", error);
+
+      const errorBox = document.createElement("div");
+      errorBox.className =
+        "form-error rounded-xl border border-red-500/40 bg-red-500/10 p-4 text-sm font-bold text-red-200";
+      errorBox.textContent =
+        error.message || "Something went wrong. Please call or WhatsApp us directly.";
+
+      quoteForm.prepend(errorBox);
+    } finally {
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.textContent = "Send Quote Request";
+        submitBtn.classList.remove("opacity-70", "cursor-not-allowed");
+      }
+    }
+  });
+}
 
         // LANGUAGE TOGGLE
         const translations = {
