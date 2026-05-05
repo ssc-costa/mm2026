@@ -90,7 +90,7 @@ ${message || "No message provided"}
     `.trim();
 
     const { data, error } = await resend.emails.send({
-      from: "Mr Move Website <onboarding@resend.dev>",
+      from: "Mr Move Website <quotes@mail.mrmove.es>",
       to: ["info@mrmove.es"],
       replyTo: email,
       subject: `New Mr Move quote request from ${name}`,
