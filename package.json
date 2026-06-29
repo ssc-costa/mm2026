@@ -1,8 +1,16 @@
 {
   "name": "mrmove-site",
   "version": "1.0.0",
+  "private": true,
   "type": "module",
+  "scripts": {
+    "dev": "vercel dev",
+    "check": "node --check api/contact.js"
+  },
   "dependencies": {
     "resend": "^6.0.0"
+  },
+  "devDependencies": {
+    "vercel": "^46.0.0"
   }
 }
