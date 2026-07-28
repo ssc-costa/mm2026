@@ -15,7 +15,7 @@
     <meta property="og:url" content="https://mrmove.es/">
     <meta property="og:title" content="Mr Move | Removals & Secure Storage Costa Blanca">
     <meta property="og:description" content="Fully licensed removal company on the Costa Blanca. Local moves, Spain–UK relocations, secure insured storage and crane services. 15+ years experience.">
-    <meta property="og:image" content="https://i.imghippo.com/files/AVm6314yyY.jpg">
+    <meta property="og:image" content="https://mrmove.es/assets/2-van.jpg">
     <meta property="og:locale" content="en_GB">
     <meta property="og:site_name" content="Mr Move Costa Blanca">
 
@@ -23,7 +23,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Mr Move | Removals & Secure Storage Costa Blanca">
     <meta name="twitter:description" content="Fully licensed removal company on the Costa Blanca. Local moves, Spain–UK relocations, secure insured storage and crane services.">
-    <meta name="twitter:image" content="https://i.imghippo.com/files/AVm6314yyY.jpg">
+    <meta name="twitter:image" content="https://mrmove.es/assets/2-van.jpg">
 
     <!-- PERFORMANCE: PRECONNECTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -43,8 +43,8 @@
       "@type": "MovingCompany",
       "name": "Mr Move",
       "url": "https://mrmove.es",
-      "logo": "https://i.imghippo.com/files/rCjU7017bI.png",
-      "image": "https://i.imghippo.com/files/AVm6314yyY.jpg",
+      "logo": "https://mrmove.es/assets/mr-move-logo.png",
+      "image": "https://mrmove.es/assets/2-van.jpg",
       "description": "Fully licensed and insured removal company on the Costa Blanca, Spain. Specialising in local removals, Spain–UK relocations, secure storage, packing and crane-assisted access.",
       "telephone": "+34635647716",
       "email": "info@mrmove.es",
@@ -69,7 +69,7 @@
       "areaServed": [
         "Torrevieja","Alicante","Benidorm","Orihuela Costa","Guardamar del Segura","Santa Pola","Elche","Calpe","Costa Blanca"
       ],
-      "priceRange": "££",
+      "priceRange": "€€",
       "hasMap": "https://maps.google.com/?q=Costa+Blanca+Spain",
       "sameAs": [
         "https://wa.me/34635647716"
@@ -259,6 +259,96 @@
             0% { opacity: 0.7; transform: scale(1); }
             100% { opacity: 0; transform: scale(1.4); }
         }
+
+        .hero-shell {
+            position: relative;
+            isolation: isolate;
+            min-height: 760px;
+            display: flex;
+            align-items: center;
+            background:
+                linear-gradient(90deg, rgba(6,6,8,0.98) 0%, rgba(6,6,8,0.94) 42%, rgba(6,6,8,0.28) 72%, rgba(6,6,8,0.1) 100%),
+                linear-gradient(0deg, #0a0a0c 0%, transparent 22%),
+                url('assets/2-van.jpg') center right / cover no-repeat;
+        }
+
+        .hero-shell::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            background:
+                linear-gradient(90deg, rgba(217,22,36,0.14), transparent 32%),
+                radial-gradient(circle at 72% 28%, rgba(212,175,55,0.12), transparent 28%);
+            pointer-events: none;
+        }
+
+        .hero-kicker {
+            letter-spacing: 0.18em;
+        }
+
+        .hero-title {
+            max-width: 890px;
+            text-wrap: balance;
+        }
+
+        .hero-title .accent {
+            position: relative;
+            display: inline-block;
+            color: white;
+            z-index: 0;
+        }
+
+        .hero-title .accent::after {
+            content: '';
+            position: absolute;
+            left: -0.02em;
+            right: -0.02em;
+            bottom: 0.05em;
+            height: 0.17em;
+            z-index: -1;
+            border-radius: 999px;
+            background: var(--red-1);
+            transform: rotate(-1.2deg);
+        }
+
+        .hero-panel {
+            background: rgba(12,12,15,0.86);
+            border: 1px solid rgba(255,255,255,0.14);
+            box-shadow: 0 24px 70px rgba(0,0,0,0.42);
+            backdrop-filter: blur(18px);
+        }
+
+        .trust-ticker {
+            background: rgba(7,7,9,0.92);
+            border-top: 1px solid rgba(255,255,255,0.1);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .trust-item + .trust-item {
+            border-left: 1px solid rgba(255,255,255,0.1);
+        }
+
+        @media (max-width: 1023px) {
+            .hero-shell {
+                min-height: auto;
+                background:
+                    linear-gradient(180deg, rgba(6,6,8,0.72) 0%, rgba(6,6,8,0.9) 38%, #0a0a0c 88%),
+                    url('assets/2-van.jpg') 64% top / auto 430px no-repeat;
+            }
+
+            .trust-item + .trust-item {
+                border-left: 0;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .hero-shell {
+                background:
+                    linear-gradient(180deg, rgba(6,6,8,0.58) 0%, rgba(6,6,8,0.95) 34%, #0a0a0c 82%),
+                    url('assets/2-van.jpg') 62% top / auto 330px no-repeat;
+            }
+        }
     </style>
 </head>
 <body class="min-h-screen">
@@ -268,7 +358,7 @@
         <div class="max-w-7xl mx-auto px-4 md:px-8 h-full">
             <div class="flex items-center justify-between h-full">
                 <a href="#top" class="flex items-center gap-3 group">
-                    <img src="https://i.imghippo.com/files/rCjU7017bI.png" alt="Mr Move removal company logo" class="h-10 w-auto object-contain group-hover:scale-105 transition-transform">
+                    <img src="assets/mr-move-logo.png" alt="Mr Move removal company logo" class="h-12 w-auto object-contain group-hover:scale-105 transition-transform">
                     <div>
                         <div class="font-extrabold text-lg leading-none tracking-tight text-white">MR MOVE</div>
                         <div class="text-[10px] uppercase tracking-[0.2em] text-gold font-bold mt-1">Removals & Storage</div>
@@ -332,64 +422,86 @@
     </div>
 
     <!-- HERO SECTION -->
-    <section id="top" class="pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 md:px-8">
-            <div class="grid lg:grid-cols-2 gap-16 items-center">
-                <div class="space-y-8 relative z-10">
-                    <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-[#17171c] border border-gold text-xs md:text-sm font-bold text-white">
-                        <span class="flex h-2.5 w-2.5 rounded-full bg-gold animate-pulse"></span>
-                        Fully Licensed & Insured — Costa Blanca
+    <section id="top" class="hero-shell pt-28 pb-12 lg:pt-24 lg:pb-0 overflow-hidden">
+        <div class="w-full max-w-7xl mx-auto px-4 md:px-8">
+            <div class="grid lg:grid-cols-[minmax(0,1fr)_390px] gap-10 xl:gap-20 items-end lg:items-center py-16 md:py-24 lg:py-32">
+                <div class="relative z-10 max-w-4xl">
+                    <div class="hero-kicker inline-flex items-center gap-3 text-[11px] md:text-xs uppercase font-black text-gold mb-7">
+                        <span class="w-10 h-px bg-[#d4af37]"></span>
+                        Costa Blanca · Spain ↔ UK · Europe
                     </div>
-                    
-                    <h1 class="text-4xl md:text-6xl font-extrabold leading-[1.06] tracking-tight text-white">
-                        Removals, storage and specialist lifting across the
-                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-[#d4af37] to-[#d91624]">Costa Blanca.</span>
+
+                    <h1 class="hero-title text-5xl sm:text-6xl md:text-7xl xl:text-[5.4rem] font-black leading-[0.96] tracking-[-0.045em] text-white">
+                        Your move, handled <span class="accent">properly.</span>
                     </h1>
-                    
-                    <p class="text-lg md:text-xl text-white/82 max-w-xl leading-relaxed font-medium">
-                        From local man-and-van jobs in Torrevieja and Alicante to full Spain–UK relocations, secure insured storage and crane-assisted access — Mr Move handles the awkward parts so your move feels less like a punishment.
+
+                    <p class="mt-7 text-lg md:text-xl text-white/80 max-w-2xl leading-relaxed font-medium">
+                        Local removals, international relocations, secure storage and crane-assisted access — run by an experienced Costa Blanca team that turns up, takes care and gets it moved.
                     </p>
 
-                    <div class="flex flex-wrap gap-4">
-                        <a href="#quote" class="btn-primary px-8 py-4 rounded-2xl font-bold text-lg flex items-center gap-3 text-white shadow-xl shadow-red-950/20">
-                            Start Your Move
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                    <div class="flex flex-col sm:flex-row gap-3 mt-9">
+                        <a href="#quote" class="btn-primary px-8 py-4 rounded-xl font-black text-base md:text-lg flex items-center justify-center gap-3 text-white shadow-xl shadow-red-950/20">
+                            Get My Free Quote
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                         </a>
-                        <a href="https://wa.me/34635647716" class="btn-secondary px-8 py-4 rounded-2xl font-bold text-lg flex items-center gap-3 text-white" aria-label="Contact Mr Move on WhatsApp">
-                            <svg class="w-6 h-6 text-[#25d366]" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-                            WhatsApp
+                        <a href="tel:+34635647716" class="btn-secondary px-7 py-4 rounded-xl font-bold text-base md:text-lg flex items-center justify-center gap-3 text-white">
+                            <svg class="w-5 h-5 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                            Call 635 64 77 16
                         </a>
                     </div>
 
-                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-4 border-t border-white/10">
-                        <div class="space-y-1">
-                            <p class="text-2xl font-black text-white">15+</p>
-                            <p class="text-[10px] uppercase tracking-widest text-white/60 font-bold">Years Exp</p>
-                        </div>
-                        <div class="space-y-1">
-                            <p class="text-2xl font-black text-white">Insured</p>
-                            <p class="text-[10px] uppercase tracking-widest text-white/60 font-bold">Goods in Transit</p>
-                        </div>
-                        <div class="space-y-1">
-                            <p class="text-2xl font-black text-white">Licensed</p>
-                            <p class="text-[10px] uppercase tracking-widest text-white/60 font-bold">& VAT Registered</p>
-                        </div>
-                        <div class="space-y-1">
-                            <p class="text-2xl font-black text-white">Costa Blanca</p>
-                            <p class="text-[10px] uppercase tracking-widest text-white/60 font-bold">Based Locally</p>
-                        </div>
+                    <div class="flex flex-wrap gap-x-6 gap-y-3 mt-8 text-sm font-bold text-white/72">
+                        <span class="flex items-center gap-2"><span class="text-gold">✓</span> Fully licensed</span>
+                        <span class="flex items-center gap-2"><span class="text-gold">✓</span> Goods insured in transit</span>
+                        <span class="flex items-center gap-2"><span class="text-gold">✓</span> 15+ years’ experience</span>
                     </div>
                 </div>
 
-                <div class="relative group hidden lg:block">
-                    <div class="absolute -inset-5 rounded-[2.8rem] bg-gradient-to-br from-[#d4af37]/12 via-transparent to-[#d91624]/10 blur-2xl"></div>
-                    <div class="relative bg-panel rounded-[2.5rem] overflow-hidden border border-white/10 aspect-[4/5] shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
-                        <img src="https://i.imghippo.com/files/AVm6314yyY.jpg" alt="Mr Move removal vans and fleet on the Costa Blanca" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" fetchpriority="high">
+                <aside class="hero-panel rounded-2xl p-6 md:p-7 relative z-10">
+                    <div class="flex items-center justify-between gap-4 mb-5">
+                        <div>
+                            <p class="text-[10px] uppercase tracking-[0.2em] text-gold font-black">Need a quick answer?</p>
+                            <h2 class="text-xl font-extrabold mt-1">Tell us what is moving.</h2>
+                        </div>
+                        <span class="w-11 h-11 rounded-full bg-[#25d366]/15 border border-[#25d366]/30 flex items-center justify-center text-[#25d366]">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        </span>
                     </div>
-                </div>
+                    <div class="space-y-3 text-sm text-white/75 font-medium">
+                        <p class="flex gap-3"><span class="text-gold font-black">01</span> Where are you moving from and to?</p>
+                        <p class="flex gap-3"><span class="text-gold font-black">02</span> Roughly how much needs moving?</p>
+                        <p class="flex gap-3"><span class="text-gold font-black">03</span> Any stairs, storage or awkward items?</p>
+                    </div>
+                    <a href="https://wa.me/34635647716?text=Hi%20Mr%20Move%2C%20I%27d%20like%20a%20quote%20for%20a%20move." class="mt-6 w-full bg-[#25d366] hover:bg-[#20bd5a] text-[#07120a] rounded-xl px-5 py-3.5 font-black flex items-center justify-center gap-2 transition-colors" aria-label="Ask Mr Move for a quote on WhatsApp">
+                        Quote me on WhatsApp
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                    </a>
+                    <p class="text-[11px] text-white/45 text-center mt-3">No call centre. You speak directly to the team.</p>
+                </aside>
             </div>
         </div>
     </section>
+
+    <div class="trust-ticker" aria-label="Mr Move service assurances">
+        <div class="max-w-7xl mx-auto grid grid-cols-2 lg:grid-cols-4 px-4 md:px-8">
+            <div class="trust-item py-5 lg:px-6 first:pl-0">
+                <p class="text-xs uppercase tracking-[0.16em] text-white/45 font-bold">Based near</p>
+                <p class="font-extrabold mt-1">Torrevieja</p>
+            </div>
+            <div class="trust-item py-5 lg:px-6">
+                <p class="text-xs uppercase tracking-[0.16em] text-white/45 font-bold">Coverage</p>
+                <p class="font-extrabold mt-1">Spain, UK & Europe</p>
+            </div>
+            <div class="trust-item py-5 lg:px-6">
+                <p class="text-xs uppercase tracking-[0.16em] text-white/45 font-bold">Specialist access</p>
+                <p class="font-extrabold mt-1">Crane lifting</p>
+            </div>
+            <div class="trust-item py-5 lg:pl-6">
+                <p class="text-xs uppercase tracking-[0.16em] text-white/45 font-bold">Flexible options</p>
+                <p class="font-extrabold mt-1">Storage & packing</p>
+            </div>
+        </div>
+    </div>
 
     <!-- SERVICES -->
     <section id="services" class="py-24 bg-[#0a0a0c]">
@@ -500,7 +612,7 @@
             <div class="grid lg:grid-cols-2 gap-12 items-center">
                 <div class="order-2 lg:order-1">
                     <div class="relative rounded-[2.5rem] overflow-hidden border border-white/20 shadow-2xl group">
-                        <img src="https://i.imghippo.com/files/dtpj1071ugc.jpg" alt="Secure insured storage facility Costa Blanca" class="w-full aspect-video lg:aspect-square object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy">
+                        <img src="assets/IMG-20230214-WA0042.jpg" alt="Mr Move van packed securely for transport and storage" class="w-full aspect-video lg:aspect-square object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy">
                         <div class="absolute top-6 left-6 flex flex-col gap-2">
                             <span class="bg-[#16161a] px-4 py-2 rounded-full text-xs font-bold border border-green-500/50 text-green-400 flex items-center gap-2">
                                 <span class="w-2 h-2 rounded-full bg-green-500"></span>
@@ -560,11 +672,11 @@
             </div>
             <div class="grid md:grid-cols-2 gap-6">
                 <div class="rounded-[2rem] overflow-hidden border border-white/10 aspect-[4/3] relative group">
-                    <img src="https://i.imghippo.com/files/tqgf4325s.jpg" alt="Mr Move professional removal team Costa Blanca" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy">
+                    <img src="assets/IMG-20260303-WA0017.jpg" alt="Mr Move professional removal team loading a van on the Costa Blanca" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
                 <div class="rounded-[2rem] overflow-hidden border border-white/10 aspect-[4/3] relative group">
-                    <img src="https://i.imghippo.com/files/aXCm3395ckw.jpg" alt="Mr Move removal team Torrevieja Alicante" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy">
+                    <img src="assets/IMG-20240218-WA0027.jpg" alt="Mr Move removal van and team working on the Costa Blanca" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
             </div>
@@ -902,7 +1014,7 @@
                             </button>
                             
                             <p class="text-center text-[11px] text-white/45 font-bold leading-relaxed">
-                                Submitted securely via Formspree. No spam, no data selling — just a quote for your move.
+                                Sent securely to the Mr Move team. No spam, no data selling — just a quote for your move.
                             </p>
                         </form>
                     </div>
@@ -916,7 +1028,7 @@
         <div class="max-w-7xl mx-auto px-4 md:px-8">
             <div class="flex flex-col md:flex-row justify-between items-center gap-8 text-center md:text-left">
                 <div class="flex items-center gap-3">
-                    <img src="https://i.imghippo.com/files/rCjU7017bI.png" alt="Mr Move Costa Blanca removal company" class="h-8 w-auto object-contain">
+                    <img src="assets/mr-move-logo.png" alt="Mr Move Costa Blanca removal company" class="h-10 w-auto object-contain">
                     <div>
                         <span class="font-bold text-white block">MR MOVE</span>
                         <span class="text-[10px] text-white/40 font-bold uppercase tracking-widest">Costa Blanca Removals & Storage</span>
@@ -1108,12 +1220,12 @@ if (quoteForm) {
         // LANGUAGE TOGGLE
         const translations = {
             en: {
-                heroH1: 'Removals, storage and specialist lifting across the <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-[#d4af37] to-[#d91624]">Costa Blanca.</span>',
-                heroP: "From local man-and-van jobs in Torrevieja and Alicante to full Spain–UK relocations, secure insured storage and crane-assisted access — Mr Move handles the awkward parts so your move feels less like a punishment."
+                heroH1: 'Your move, handled <span class="accent">properly.</span>',
+                heroP: "Local removals, international relocations, secure storage and crane-assisted access — run by an experienced Costa Blanca team that turns up, takes care and gets it moved."
             },
             es: {
-                heroH1: 'Mudanzas, almacenaje y elevación especializada por toda la <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-[#d4af37] to-[#d91624]">Costa Blanca.</span>',
-                heroP: "Desde mudanzas locales en Torrevieja y Alicante hasta traslados completos España–Reino Unido, almacenaje seguro y acceso con grúa — Mr Move se encarga de la parte difícil para que tu mudanza sea más fácil."
+                heroH1: 'Tu mudanza, hecha <span class="accent">como debe ser.</span>',
+                heroP: "Mudanzas locales e internacionales, almacenaje seguro y acceso con grúa — con un equipo experimentado de la Costa Blanca que llega, cuida tus cosas y termina el trabajo."
             }
         };
 
