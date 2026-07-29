@@ -140,11 +140,18 @@
                 radial-gradient(circle at top left, rgba(217,22,36,0.08), transparent 24%),
                 var(--bg);
             color: var(--text);
-            padding-bottom: 70px;
+            padding-bottom: calc(76px + env(safe-area-inset-bottom));
+            overflow-x: hidden;
         }
 
         @media (min-width: 768px) {
             body { padding-bottom: 0; }
+        }
+
+        @media (max-width: 767px) {
+            #main-header {
+                height: 4rem !important;
+            }
         }
 
         .glass {
@@ -343,10 +350,95 @@
         }
 
         @media (max-width: 640px) {
+            section {
+                scroll-margin-top: 64px;
+            }
+
             .hero-shell {
+                min-height: 650px;
+                align-items: flex-start;
                 background:
-                    linear-gradient(180deg, rgba(6,6,8,0.58) 0%, rgba(6,6,8,0.95) 34%, #0a0a0c 82%),
-                    url('assets/2-van.jpg') 62% top / auto 330px no-repeat;
+                    linear-gradient(180deg, rgba(6,6,8,0.24) 0%, rgba(6,6,8,0.72) 27%, rgba(6,6,8,0.98) 67%, #0a0a0c 100%),
+                    url('assets/2-van.jpg') 58% top / auto 285px no-repeat;
+            }
+
+            .hero-shell > div > div {
+                padding-top: 2.25rem !important;
+                padding-bottom: 1.25rem !important;
+                gap: 1.5rem !important;
+            }
+
+            .hero-kicker {
+                margin-bottom: 1.25rem !important;
+                letter-spacing: 0.12em;
+            }
+
+            .hero-title {
+                font-size: clamp(2.55rem, 12vw, 3.15rem) !important;
+                line-height: 0.98 !important;
+                letter-spacing: -0.05em !important;
+                text-wrap: pretty;
+            }
+
+            .mobile-compact-copy {
+                margin-top: 1.25rem !important;
+                font-size: 1rem !important;
+                line-height: 1.55 !important;
+            }
+
+            .mobile-hero-actions {
+                display: grid !important;
+                grid-template-columns: minmax(0, 1.12fr) minmax(0, 0.88fr);
+                margin-top: 1.5rem !important;
+            }
+
+            .mobile-hero-actions a {
+                min-height: 52px;
+                padding: 0.75rem 0.85rem !important;
+                font-size: 0.875rem !important;
+            }
+
+            .mobile-trust {
+                margin-top: 1.25rem !important;
+                gap: 0.6rem 1rem !important;
+                font-size: 0.75rem !important;
+            }
+
+            .trust-ticker .trust-item {
+                padding-top: 1rem;
+                padding-bottom: 1rem;
+            }
+
+            .trust-ticker .trust-item:nth-child(even) {
+                padding-left: 1rem;
+                border-left: 1px solid rgba(255,255,255,0.1);
+            }
+
+            #services,
+            #storage,
+            #areas,
+            #process,
+            #reviews,
+            #faq,
+            #quote {
+                padding-top: 4rem !important;
+                padding-bottom: 4rem !important;
+            }
+
+            #quote .quote-card {
+                padding: 1.25rem !important;
+                border-radius: 1.5rem !important;
+            }
+
+            #quote input,
+            #quote select,
+            #quote textarea {
+                min-height: 48px;
+                font-size: 16px !important;
+            }
+
+            .mobile-cta-bar {
+                padding-bottom: calc(0.75rem + env(safe-area-inset-bottom));
             }
         }
     </style>
@@ -354,12 +446,12 @@
 <body class="min-h-screen">
 
     <!-- NAVIGATION -->
-    <header class="fixed top-0 left-0 right-0 z-50 glass border-b border-white/10 transition-all duration-300 h-20" id="main-header">
+    <header class="fixed top-0 left-0 right-0 z-50 glass border-b border-white/10 transition-all duration-300 h-16 md:h-20" id="main-header">
         <div class="max-w-7xl mx-auto px-4 md:px-8 h-full">
             <div class="flex items-center justify-between h-full">
                 <a href="#top" class="flex items-center gap-3 group">
-                    <img src="assets/mr-move-logo.png" alt="Mr Move removal company logo" class="h-12 w-auto object-contain group-hover:scale-105 transition-transform">
-                    <div>
+                    <img src="assets/mr-move-logo.png" alt="Mr Move removal company logo" class="h-10 md:h-12 w-auto object-contain group-hover:scale-105 transition-transform">
+                    <div class="hidden sm:block">
                         <div class="font-extrabold text-lg leading-none tracking-tight text-white">MR MOVE</div>
                         <div class="text-[10px] uppercase tracking-[0.2em] text-gold font-bold mt-1">Removals & Storage</div>
                     </div>
@@ -380,14 +472,17 @@
                 </nav>
 
                 <div class="flex items-center gap-4">
+                    <a href="tel:+34635647716" class="md:hidden w-11 h-11 rounded-full border border-white/15 bg-white/5 flex items-center justify-center text-gold" aria-label="Call Mr Move">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                    </a>
                     <a href="tel:+34635647716" class="hidden md:flex items-center gap-2 text-sm font-bold text-white hover:text-gold transition-colors" aria-label="Call Mr Move">
                         <svg class="w-4 h-4 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
                         635 64 77 16
                     </a>
-                    <a href="#quote" class="btn-primary px-6 py-2.5 rounded-full text-sm font-bold shadow-lg text-white">
+                    <a href="#quote" class="hidden sm:inline-flex btn-primary px-6 py-2.5 rounded-full text-sm font-bold shadow-lg text-white">
                         Get a Quote
                     </a>
-                    <button id="menuBtn" class="lg:hidden p-2 text-white" aria-label="Open navigation menu">
+                    <button id="menuBtn" class="lg:hidden w-11 h-11 flex items-center justify-center text-white" aria-label="Open navigation menu">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/></svg>
                     </button>
                 </div>
@@ -422,7 +517,7 @@
     </div>
 
     <!-- HERO SECTION -->
-    <section id="top" class="hero-shell pt-28 pb-12 lg:pt-24 lg:pb-0 overflow-hidden">
+    <section id="top" class="hero-shell pt-16 md:pt-20 pb-8 lg:pt-24 lg:pb-0 overflow-hidden">
         <div class="w-full max-w-7xl mx-auto px-4 md:px-8">
             <div class="grid lg:grid-cols-[minmax(0,1fr)_390px] gap-10 xl:gap-20 items-end lg:items-center py-16 md:py-24 lg:py-32">
                 <div class="relative z-10 max-w-4xl">
@@ -435,29 +530,33 @@
                         Your move, handled <span class="accent">properly.</span>
                     </h1>
 
-                    <p class="mt-7 text-lg md:text-xl text-white/80 max-w-2xl leading-relaxed font-medium">
+                    <p class="mobile-compact-copy mt-7 text-lg md:text-xl text-white/80 max-w-2xl leading-relaxed font-medium">
                         Local removals, international relocations, secure storage and crane-assisted access — run by an experienced Costa Blanca team that turns up, takes care and gets it moved.
                     </p>
 
-                    <div class="flex flex-col sm:flex-row gap-3 mt-9">
+                    <div class="mobile-hero-actions flex flex-col sm:flex-row gap-3 mt-9">
                         <a href="#quote" class="btn-primary px-8 py-4 rounded-xl font-black text-base md:text-lg flex items-center justify-center gap-3 text-white shadow-xl shadow-red-950/20">
-                            Get My Free Quote
+                            <span class="sm:hidden">Free Quote</span>
+                            <span class="hidden sm:inline">Get My Free Quote</span>
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                         </a>
-                        <a href="tel:+34635647716" class="btn-secondary px-7 py-4 rounded-xl font-bold text-base md:text-lg flex items-center justify-center gap-3 text-white">
+                        <a href="https://wa.me/34635647716?text=Hi%20Mr%20Move%2C%20I%27d%20like%20a%20quote%20for%20a%20move." class="sm:hidden bg-[#25d366] text-[#07120a] px-4 py-4 rounded-xl font-black flex items-center justify-center gap-2">
+                            WhatsApp
+                        </a>
+                        <a href="tel:+34635647716" class="hidden sm:flex btn-secondary px-7 py-4 rounded-xl font-bold text-base md:text-lg items-center justify-center gap-3 text-white">
                             <svg class="w-5 h-5 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
                             Call 635 64 77 16
                         </a>
                     </div>
 
-                    <div class="flex flex-wrap gap-x-6 gap-y-3 mt-8 text-sm font-bold text-white/72">
+                    <div class="mobile-trust flex flex-wrap gap-x-6 gap-y-3 mt-8 text-sm font-bold text-white/72">
                         <span class="flex items-center gap-2"><span class="text-gold">✓</span> Fully licensed</span>
                         <span class="flex items-center gap-2"><span class="text-gold">✓</span> Goods insured in transit</span>
                         <span class="flex items-center gap-2"><span class="text-gold">✓</span> 15+ years’ experience</span>
                     </div>
                 </div>
 
-                <aside class="hero-panel rounded-2xl p-6 md:p-7 relative z-10">
+                <aside class="hero-panel hidden md:block rounded-2xl p-6 md:p-7 relative z-10">
                     <div class="flex items-center justify-between gap-4 mb-5">
                         <div>
                             <p class="text-[10px] uppercase tracking-[0.2em] text-gold font-black">Need a quick answer?</p>
@@ -886,7 +985,7 @@
                     </div>
                     <p class="text-lg text-white/80 font-medium leading-relaxed">Use the form for a full quote request. For quick availability checks or urgent bookings, call or WhatsApp directly. We're open Monday to Saturday, 08:00–18:00.</p>
                     
-                    <div class="p-8 bg-[#16161a] rounded-[2rem] border border-gold/40 relative overflow-hidden">
+                    <div class="hidden md:block p-8 bg-[#16161a] rounded-[2rem] border border-gold/40 relative overflow-hidden">
                         <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#d4af37] to-transparent opacity-60"></div>
                         <h3 class="text-xl font-bold mb-4 text-white">Direct Contact</h3>
                         <p class="text-sm text-white/70 mb-6 font-medium">Best for urgent bookings, crane enquiries and same-day availability on the Costa Blanca.</p>
@@ -897,7 +996,7 @@
                 </div>
 
                 <div class="lg:col-span-3">
-                    <div class="bg-[#16161a] p-8 md:p-10 rounded-[2.5rem] border border-white/10 shadow-2xl relative overflow-hidden">
+                    <div class="quote-card bg-[#16161a] p-8 md:p-10 rounded-[2.5rem] border border-white/10 shadow-2xl relative overflow-hidden">
                         <div class="absolute inset-x-10 top-0 h-px bg-gradient-to-r from-transparent via-[#d4af37] to-transparent opacity-50"></div>
                         
                         <!-- SUCCESS STATE -->
@@ -1053,22 +1152,19 @@
     </footer>
 
     <!-- MOBILE STICKY CTA BAR -->
-    <div class="fixed bottom-0 left-0 right-0 z-30 md:hidden bg-[#0d0d10]/95 backdrop-blur-xl border-t border-white/10 px-4 py-3 flex gap-3">
-        <a href="tel:+34635647716" class="flex-1 flex items-center justify-center gap-2 bg-white/8 border border-white/15 text-white font-bold py-3 rounded-xl text-sm">
+    <div class="mobile-cta-bar fixed bottom-0 left-0 right-0 z-30 md:hidden bg-[#0d0d10]/95 backdrop-blur-xl border-t border-white/10 px-4 py-3 flex gap-3">
+        <a href="tel:+34635647716" class="flex-[0.85] min-h-12 flex items-center justify-center gap-2 bg-white/8 border border-white/15 text-white font-bold py-3 rounded-xl text-sm">
             <svg class="w-4 h-4 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
             Call Us
         </a>
-        <a href="https://wa.me/34635647716?text=Hi,%20I'd%20like%20a%20quote%20for%20a%20removal%20on%20the%20Costa%20Blanca" class="flex-1 flex items-center justify-center gap-2 bg-[#25d366] text-white font-bold py-3 rounded-xl text-sm">
+        <a href="https://wa.me/34635647716?text=Hi,%20I'd%20like%20a%20quote%20for%20a%20removal%20on%20the%20Costa%20Blanca" class="flex-[1.15] min-h-12 flex items-center justify-center gap-2 bg-[#25d366] text-[#07120a] font-black py-3 rounded-xl text-sm">
             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
             WhatsApp
-        </a>
-        <a href="#quote" class="flex-1 flex items-center justify-center gap-2 btn-primary text-white font-bold py-3 rounded-xl text-sm">
-            Get Quote
         </a>
     </div>
 
     <!-- FLOATING WHATSAPP FAB -->
-    <div class="fixed bottom-6 right-6 z-40 flex items-center gap-3 fab-wrapper">
+    <div class="hidden md:flex fixed bottom-6 right-6 z-40 items-center gap-3 fab-wrapper">
         <div class="fab-tooltip bg-[#16161a] border border-white/15 text-white text-sm font-bold px-4 py-2.5 rounded-2xl shadow-xl whitespace-nowrap">
             Chat on WhatsApp
         </div>
